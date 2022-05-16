@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Front\ContactUsController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,8 +15,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('landing');
 });
+
+Route::get('contact-us', [ContactUsController::class, 'index'])->name('contactUs');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
