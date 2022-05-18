@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Front\BlogController;
 use App\Http\Controllers\Front\ContactUsController;
 use Illuminate\Support\Facades\Route;
 
@@ -19,6 +20,9 @@ Route::get('/', function () {
 });
 
 Route::get('contact-us', [ContactUsController::class, 'index'])->name('contactUs');
+
+Route::get('blogs', [BlogController::class, 'index'])->name('blogIndex');
+Route::get('blogs/post', [BlogController::class, 'show'])->name('blogShow');
 
 Route::get('/dashboard', function () {
     return view('dashboard');

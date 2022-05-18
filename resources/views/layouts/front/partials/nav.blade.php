@@ -3,7 +3,8 @@
         <div class="container flex-lg-row flex-nowrap align-items-center">
             <div class="navbar-brand w-100">
                 <a href="/">
-                    <img src="/front/assets/img/kiji-land.png" srcset="/front/assets/img/kiji-land.png 2x" alt="Kijii" />
+                    <img src="/front/assets/img/kiji-land.png" srcset="/front/assets/img/kiji-land.png 2x"
+                        alt="Kijii" />
                 </a>
             </div>
             <div class="navbar-collapse offcanvas offcanvas-nav offcanvas-start">
@@ -18,7 +19,7 @@
                             <a class="nav-link" href="#">About</a>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link" href="#">Blog</a>
+                            <a class="nav-link" href="{{ route('blogIndex') }}">Blog</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link" href="{{ route('contactUs') }}">Contact</a>
