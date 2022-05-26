@@ -12,11 +12,11 @@
         <!--/div -->
         <hr class="mt-11 mb-12" />
         <div class="row gy-6 gy-lg-0">
-            <div class="col-md-4 col-lg-3">
+            <div class="col-md-4 col-lg-4">
                 <div class="widget">
                     <img class="mb-4" src="/front/assets/img/kiji-logo-white.png" srcset="/front/assets/img/kiji-logo-white.png 2x"
                         alt="" />
-                    <p class="mb-4">© {{ date('Y') }} Kijii. <br class="d-none d-lg-block" />All rights reserved.</p>
+                    <p class="mb-4">&copy; {{ date('Y') }} Kijii. <br class="d-none d-lg-block" />All rights reserved.</p>
                     <nav class="nav social social-white">
                         <a href="#"><i class="uil uil-twitter"></i></a>
                         <a href="#"><i class="uil uil-facebook-f"></i></a>
@@ -29,7 +29,7 @@
                 <!-- /.widget -->
             </div>
             <!-- /column -->
-            <div class="col-md-4 col-lg-3">
+            <div class="col-md-4 col-lg-4">
                 <div class="widget">
                     <h4 class="widget-title text-white mb-3">Get in Touch</h4>
                     <address class="pe-xl-15 pe-xxl-17">Moonshine St. 14/05 Light City, London, United Kingdom
@@ -39,13 +39,13 @@
                 <!-- /.widget -->
             </div>
             <!-- /column -->
-            <div class="col-md-4 col-lg-3">
+            <div class="col-md-4 col-lg-4">
                 <div class="widget">
                     <h4 class="widget-title text-white mb-3">Learn More</h4>
                     <ul class="list-unstyled  mb-0">
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Our Story</a></li>
-                        <li><a href="#">Projects</a></li>
+                        <li><a href="{{ route('about') }}">About Us</a></li>
+                        {{-- <li><a href="#">Our Story</a></li> --}}
+                        {{-- <li><a href="#">Projects</a></li> --}}
                         <li><a href="#">Terms of Use</a></li>
                         <li><a href="#">Privacy Policy</a></li>
                     </ul>
@@ -53,7 +53,7 @@
                 <!-- /.widget -->
             </div>
             <!-- /column -->
-            <div class="col-md-12 col-lg-3">
+            {{-- <div class="col-md-12 col-lg-3">
                 <div class="widget">
                     <h4 class="widget-title text-white mb-3">Our Newsletter</h4>
                     <p class="mb-5">Subscribe to our newsletter to get our news & deals delivered to you.</p>
@@ -90,7 +90,7 @@
                     <!-- /.newsletter-wrapper -->
                 </div>
                 <!-- /.widget -->
-            </div>
+            </div> --}}
             <!-- /column -->
         </div>
         <!--/.row -->

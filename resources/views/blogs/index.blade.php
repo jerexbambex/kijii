@@ -29,7 +29,7 @@
                     <article class="post">
                         <div class="card">
                             <figure class="card-img-top overlay overlay-1 hover-scale"><a class="link-dark"
-                                    href="{{ route('blogShow') }}"><img src="/front/assets/img/photos/b1.jpg" alt="" /></a>
+                                    href="{{ route('blogShow', 'first-post') }}"><img src="/front/assets/img/photos/b1.jpg" alt="" /></a>
                                 <figcaption>
                                     <h5 class="from-top mb-0">Read More</h5>
                                 </figcaption>
@@ -40,18 +40,16 @@
                                         <a href="#" class="hover" rel="category">Teamwork</a>
                                     </div>
                                     <!-- /.post-category -->
-                                    <h2 class="post-title mt-1 mb-0"><a class="link-dark" href="./blog-post.html">Amet
-                                            Dolor Bibendum Parturient Cursus</a></h2>
+                                    <h2 class="post-title mt-1 mb-0"><a class="link-dark" href="{{ route('blogShow', 'first-post') }}">My firsthand experience with web component - learnings and limitations</a></h2>
                                 </div>
                                 <!-- /.post-header -->
                                 <div class="post-content">
-                                    <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia
-                                        odio sem nec elit. Nullam quis risus eget urna mollis ornare vel. Nulla vitae
-                                        elit libero, a pharetra augue. Praesent commodo cursus magna, vel scelerisque
-                                        nisl consectetur et. Sed posuere consectetur est at lobortis. Cras mattis
-                                        consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo,
-                                        tortor mauris condimentum nibh. Cras mattis consectetur purus sit amet
-                                        fermentum. Sed posuere consectetur.</p>
+                                    <p>Though the concept of <a
+                                        href="https://kinsta.com/blog/web-components/">Web Component</a> was
+                                    first introduced more than a decade ago by Alex Russell; browsers took
+                                    time to provide support for web components and initial implementation
+                                    didn’t come until 2016 from Chrome, 2018 from Firefox, and 2020 from
+                                    Edge.</p>
                                 </div>
                                 <!-- /.post-content -->
                             </div>
@@ -67,7 +65,7 @@
                                     data-dots="true">
                                     <div class="swiper">
                                         <div class="swiper-wrapper">
-                                            <div class="swiper-slide"><img src="/front/assets/img/photos/b2.jpg" alt="" />
+                                            <div class="swiper-slide"><img src="https://community.webcomponents.dev/images/7pcIzObHSxPwFkDgy5i7YunRPXwtMpZbK1_E2n1BN34/s:1000:420/mb:500000/ar:1/aHR0cHM6Ly9jb21t/dW5pdHkud2ViY29t/cG9uZW50cy5kZXYv/cmVtb3RlaW1hZ2Vz/L3VwbG9hZHMvYXJ0/aWNsZXMvcHZoNHp0/cG13NndhNTFtODBj/czEucG5n" alt="" />
                                             </div>
                                             <div class="swiper-slide"><img src="/front/assets/img/photos/b3.jpg" alt="" />
                                             </div>
@@ -86,7 +84,7 @@
                                     </div>
                                     <!-- /.post-category -->
                                     <h2 class="post-title mt-1 mb-0"><a class="link-dark"
-                                            href="{{ route('blogShow') }}">Fringilla Ligula Pharetra Amet</a></h2>
+                                            href="{{ route('blogShow', 'second-post') }}">Fringilla Ligula Pharetra Amet</a></h2>
                                 </div>
                                 <!-- /.post-header -->
                                 <div class="post-content">

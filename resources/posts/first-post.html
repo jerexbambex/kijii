@@ -1,0 +1,225 @@
+<section class="wrapper bg-soft-primary">
+    <div class="container pt-10 pb-19 pt-md-14 pb-md-20 text-center">
+        <div class="row">
+            <div class="col-md-10 col-xl-8 mx-auto">
+                <div class="post-header">
+                    <div class="post-category text-line">
+                        <a href="#" class="hover" rel="category">Blog Post</a>
+                    </div>
+                    <!-- /.post-category -->
+                    <h1 class="display-1 mb-4">My firsthand experience with web component - learnings and limitations</h1>
+                    <ul class="post-meta mb-5">
+                        <li class="post-date"><i class="uil uil-calendar-alt"></i><span>5 Jul 2021</span></li>
+                        <li class="post-author"><a href="#"><i class="uil uil-user"></i><span>By Kijii</span></a></li>
+
+                    </ul>
+                    <!-- /.post-meta -->
+                </div>
+                <!-- /.post-header -->
+            </div>
+            <!-- /column -->
+        </div>
+        <!-- /.row -->
+    </div>
+    <!-- /.container -->
+</section>
+<!-- /section -->
+
+<section class="wrapper bg-light">
+    <div class="container pb-14 pb-md-16">
+        <div class="row">
+            <div class="col-lg-10 mx-auto">
+                <div class="blog single mt-n17">
+                    <div class="card">
+                        <figure class="card-img-top"><img src="/front/assets/img/photos/b1.jpg" alt="" /></figure>
+                        <div class="card-body">
+                            <div class="classic-view">
+                                <article class="crayons-card crayons-article mb-4" id="article-show-container"
+                                    data-article-id="46" data-author-id="50" data-co-author-ids=""
+                                    data-path="/akdevcraft/my-firsthand-experience-with-web-component-learnings-and-limitations-54ff"
+                                    data-published="true" data-pin-path="/stories/feed/pinned_article"
+                                    data-pinned-article-id="3">
+                                    <header class="crayons-article__header" id="main-title">
+
+                                        <div class="crayons-article__header__meta">
+                                            <div class="flex s:items-start flex-col s:flex-row">
+                                                <div id="action-space"
+                                                    class="crayons-article__actions mb-4 s:mb-0 s:order-last"></div>
+                                            </div>
+                                        </div>
+                                    </header>
+
+                                    <div class="crayons-article__main">
+
+                                        <div class="crayons-article__body text-styles spec__body" data-article-id="46"
+                                            id="article-body">
+                                            <p>Though the concept of <a
+                                                    href="https://kinsta.com/blog/web-components/">Web Component</a> was
+                                                first introduced more than a decade ago by Alex Russell; browsers took
+                                                time to provide support for web components and initial implementation
+                                                didn’t come until 2016 from Chrome, 2018 from Firefox, and 2020 from
+                                                Edge.</p>
+
+                                            <p>Even I got introduced to the web component last year while working on a
+                                                new project. Since then I’m still learning, trying to exploring out best
+                                                practices where native web component way is available, and hacking when
+                                                can’t find native implementation.</p>
+
+                                            <p>Here are some pain areas when you work with the web component.</p>
+
+                                            <h2>
+                                                <a name="1-inadequate-browser-support"
+                                                    href="#1-inadequate-browser-support">
+                                                </a>
+                                                1. Inadequate Browser Support
+                                            </h2>
+
+                                            <p>Even though the web component is now supported on all major browsers on
+                                                their latest version, that doesn’t really help when you have got a
+                                                global product or global customer base. And definitely, there will be
+                                                customers in various age ranges and going to use a wide variety of
+                                                browsers and versions.</p>
+
+                                            <p><strong>What does it means when I say no support?</strong> It means that
+                                                the UI element doesn’t render on screen. You won’t see anything on its
+                                                placement, e.g. if you have a footer coming from a web component, you
+                                                won’t see the footer at all.</p>
+
+                                            <p><strong>Any workaround?</strong> <a
+                                                    href="https://www.webcomponents.org/polyfills">Polyfill</a> is
+                                                promising and could extend support on the older version of browsers.</p>
+
+                                            <h4>
+                                                <a name="major-browser-support-version-without-polyfill"
+                                                    href="#major-browser-support-version-without-polyfill">
+                                                </a>
+                                                Major browser support version without Polyfill
+                                            </h4>
+
+                                            <div class="table-wrapper-paragraph">
+                                                <table>
+                                                    <thead>
+                                                        <tr>
+                                                            <th>Browser</th>
+                                                            <th>Version Support</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>Chrome</td>
+                                                            <td>68 and above</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Firefox</td>
+                                                            <td>62 and above</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Safari</td>
+                                                            <td>12 and above</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+
+                                            <h2>
+                                                <a name="2-shadow-dom" href="#2-shadow-dom">
+                                                </a>
+                                                2. Shadow DOM
+                                            </h2>
+
+                                            <p>Sometimes strength goes against you, something on similar lines happens
+                                                with the web component. Shadow DOM provides the powerful property of
+                                                encapsulation, however, if you’re developing a component to replace an
+                                                existing legacy component then you’re most likely going to break the
+                                                automation test. A shadow DOM is inaccessible from outer DOM, but again
+                                                you can use a testing library that provides support for Shadow DOM, like
+                                                Cypress to write an automation test as it provides an interface to
+                                                access shadow DOM.</p>
+
+                                            <h2>
+                                                <a name="3-session-recording" href="#3-session-recording">
+                                                </a>
+                                                3. Session Recording
+                                            </h2>
+
+                                            <p>There are different software products available that records the user
+                                                interaction with web pages so that further technical support could be
+                                                provided. However, with the web component, there is a high chance that
+                                                session recording software may not be able to capture the web component
+                                                because of Shadow DOM.</p>
+
+                                            <h2>
+                                                <a name="4-challenge-in-loading-external-font"
+                                                    href="#4-challenge-in-loading-external-font">
+                                                </a>
+                                                4. Challenge in loading external font
+                                            </h2>
+
+                                            <p>I have already written a comprehensive post about it, so I’m not going to
+                                                copy and paste it here (I’m a bit lazy 😀), here is the link <a
+                                                    href="https://dev.to/akdevcraft/use-font-in-web-component-51a4">Load
+                                                    external font with web component</a></p>
+
+                                            <h2>
+                                                <a name="conclusion" href="#conclusion">
+                                                </a>
+                                                Conclusion
+                                            </h2>
+
+                                            <p><strong>So, should we not use a web component?</strong> There is no
+                                                straightforward answer to it, nothing is perfect and everything comes
+                                                with some grey area. But we always have to weigh the pros and cons, and
+                                                ask the question, does web component solve that problem considering its
+                                                limitations?</p>
+
+                                            <p><strong>If you have reached here, then I did a satisfactory effort to
+                                                    keep you reading. Please be kind to leave any comments or ask for
+                                                    any corrections. <strong>Happy Learning!</strong></strong></p>
+                                        </div>
+
+                                    </div>
+                                </article>
+                                <!-- /.post -->
+                            </div>
+                            <!-- /.classic-view -->
+                            <hr />
+                            <div class="author-info d-md-flex align-items-center mb-3">
+                                <div class="d-flex align-items-center">
+                                    <figure class="user-avatar"><img class="rounded-circle" alt=""
+                                            src="/front/assets/img/avatars/u5.jpg" /></figure>
+                                    <div>
+                                        <h6><a href="#" class="link-dark">Obinna Njoku</a></h6>
+                                        <span class="post-meta fs-15">Sales Manager</span>
+                                    </div>
+                                </div>
+                                <div class="mt-3 mt-md-0 ms-auto">
+                                    <a href="/blogs"
+                                        class="btn btn-sm btn-soft-ash rounded-pill btn-icon btn-icon-start mb-0"><i
+                                            class="uil uil-file-alt"></i> All Posts</a>
+                                </div>
+                            </div>
+                            <!-- /.author-info -->
+                            <p>Full-Stack Software Engineer, developing end-to-end software application by handling coding, database, platform, and GUI in Java, JavaScript libraries, and other programming languages..</p>
+                            <nav class="nav social">
+                                <a href="#"><i class="uil uil-twitter"></i></a>
+                                <a href="#"><i class="uil uil-facebook-f"></i></a>
+                                <a href="#"><i class="uil uil-dribbble"></i></a>
+                                <a href="#"><i class="uil uil-instagram"></i></a>
+                                <a href="#"><i class="uil uil-youtube"></i></a>
+                            </nav>
+                            <!-- /.social -->
+                            <hr />
+                        </div>
+                        <!-- /.card-body -->
+                    </div>
+                    <!-- /.card -->
+                </div>
+                <!-- /.blog -->
+            </div>
+            <!-- /column -->
+        </div>
+        <!-- /.row -->
+    </div>
+    <!-- /.container -->
+</section>
+<!-- /section -->

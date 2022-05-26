@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Front\AboutController;
 use App\Http\Controllers\Front\BlogController;
 use App\Http\Controllers\Front\ContactUsController;
 use Illuminate\Support\Facades\Route;
@@ -19,10 +20,23 @@ Route::get('/', function () {
     return view('landing');
 });
 
+Route::get('about-us', [AboutController::class, 'index'])->name('about');
+
 Route::get('contact-us', [ContactUsController::class, 'index'])->name('contactUs');
 
 Route::get('blogs', [BlogController::class, 'index'])->name('blogIndex');
-Route::get('blogs/post', [BlogController::class, 'show'])->name('blogShow');
+
+Route::get('blogs/{post}', function($slug) {
+    $path =  __DIR__ . "/../resources/posts/{$slug}.html";
+
+    if (! file_exists($path)) {
+        return redirect('/');
+    }
+
+    $post = file_get_contents($path);
+
+    return view('blogs.show', compact('post'));
+})->name('blogShow');
 
 Route::get('/dashboard', function () {
     return view('dashboard');

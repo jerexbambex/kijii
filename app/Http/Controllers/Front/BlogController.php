@@ -12,8 +12,17 @@ class BlogController extends Controller
         return view('blogs.index');
     }
 
-    public function show()
+    public function show($slug)
     {
-        return view('blogs.show');
+        $path =  __DIR__ . "/../resources/posts/{$slug}.html";
+        dd($path);
+
+        if (! file_exists($path)) {
+            return back();
+        }
+
+        $post = file_get_contents($path);
+
+        return view('blogs.show', compact('post'));
     }
 }
