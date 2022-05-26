@@ -1,7 +1,7 @@
 @extends('layouts.front-template')
 
 @section('title')
-<title>Kijii - Modern day Artisanship | Welcome</title>
+<title>Kijii | Welcome</title>
 @stop
 
 @section('content')
