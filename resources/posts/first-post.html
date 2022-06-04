@@ -7,7 +7,8 @@
                         <a href="#" class="hover" rel="category">Blog Post</a>
                     </div>
                     <!-- /.post-category -->
-                    <h1 class="display-1 mb-4">My firsthand experience with web component - learnings and limitations</h1>
+                    <h1 class="display-1 mb-4">How To Buy A House in the UK and the Role of Property Review Platform
+                    </h1>
                     <ul class="post-meta mb-5">
                         <li class="post-date"><i class="uil uil-calendar-alt"></i><span>5 Jul 2021</span></li>
                         <li class="post-author"><a href="#"><i class="uil uil-user"></i><span>By Kijii</span></a></li>
@@ -31,7 +32,7 @@
             <div class="col-lg-10 mx-auto">
                 <div class="blog single mt-n17">
                     <div class="card">
-                        <figure class="card-img-top"><img src="/front/assets/img/photos/b1.jpg" alt="" /></figure>
+                        <figure class="card-img-top"><img src="/front/assets/img/blog/Picture1.png" alt="" /></figure>
                         <div class="card-body">
                             <div class="classic-view">
                                 <article class="crayons-card crayons-article mb-4" id="article-show-container"
@@ -48,136 +49,382 @@
                                             </div>
                                         </div>
                                     </header>
-
-                                    <div class="crayons-article__main">
-
-                                        <div class="crayons-article__body text-styles spec__body" data-article-id="46"
-                                            id="article-body">
-                                            <p>Though the concept of <a
-                                                    href="https://kinsta.com/blog/web-components/">Web Component</a> was
-                                                first introduced more than a decade ago by Alex Russell; browsers took
-                                                time to provide support for web components and initial implementation
-                                                didn’t come until 2016 from Chrome, 2018 from Firefox, and 2020 from
-                                                Edge.</p>
-
-                                            <p>Even I got introduced to the web component last year while working on a
-                                                new project. Since then I’m still learning, trying to exploring out best
-                                                practices where native web component way is available, and hacking when
-                                                can’t find native implementation.</p>
-
-                                            <p>Here are some pain areas when you work with the web component.</p>
-
-                                            <h2>
-                                                <a name="1-inadequate-browser-support"
-                                                    href="#1-inadequate-browser-support">
-                                                </a>
-                                                1. Inadequate Browser Support
-                                            </h2>
-
-                                            <p>Even though the web component is now supported on all major browsers on
-                                                their latest version, that doesn’t really help when you have got a
-                                                global product or global customer base. And definitely, there will be
-                                                customers in various age ranges and going to use a wide variety of
-                                                browsers and versions.</p>
-
-                                            <p><strong>What does it means when I say no support?</strong> It means that
-                                                the UI element doesn’t render on screen. You won’t see anything on its
-                                                placement, e.g. if you have a footer coming from a web component, you
-                                                won’t see the footer at all.</p>
-
-                                            <p><strong>Any workaround?</strong> <a
-                                                    href="https://www.webcomponents.org/polyfills">Polyfill</a> is
-                                                promising and could extend support on the older version of browsers.</p>
-
-                                            <h4>
-                                                <a name="major-browser-support-version-without-polyfill"
-                                                    href="#major-browser-support-version-without-polyfill">
-                                                </a>
-                                                Major browser support version without Polyfill
-                                            </h4>
-
-                                            <div class="table-wrapper-paragraph">
-                                                <table>
-                                                    <thead>
-                                                        <tr>
-                                                            <th>Browser</th>
-                                                            <th>Version Support</th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                        <tr>
-                                                            <td>Chrome</td>
-                                                            <td>68 and above</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Firefox</td>
-                                                            <td>62 and above</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Safari</td>
-                                                            <td>12 and above</td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </div>
-
-                                            <h2>
-                                                <a name="2-shadow-dom" href="#2-shadow-dom">
-                                                </a>
-                                                2. Shadow DOM
-                                            </h2>
-
-                                            <p>Sometimes strength goes against you, something on similar lines happens
-                                                with the web component. Shadow DOM provides the powerful property of
-                                                encapsulation, however, if you’re developing a component to replace an
-                                                existing legacy component then you’re most likely going to break the
-                                                automation test. A shadow DOM is inaccessible from outer DOM, but again
-                                                you can use a testing library that provides support for Shadow DOM, like
-                                                Cypress to write an automation test as it provides an interface to
-                                                access shadow DOM.</p>
-
-                                            <h2>
-                                                <a name="3-session-recording" href="#3-session-recording">
-                                                </a>
-                                                3. Session Recording
-                                            </h2>
-
-                                            <p>There are different software products available that records the user
-                                                interaction with web pages so that further technical support could be
-                                                provided. However, with the web component, there is a high chance that
-                                                session recording software may not be able to capture the web component
-                                                because of Shadow DOM.</p>
-
-                                            <h2>
-                                                <a name="4-challenge-in-loading-external-font"
-                                                    href="#4-challenge-in-loading-external-font">
-                                                </a>
-                                                4. Challenge in loading external font
-                                            </h2>
-
-                                            <p>I have already written a comprehensive post about it, so I’m not going to
-                                                copy and paste it here (I’m a bit lazy 😀), here is the link <a
-                                                    href="https://dev.to/akdevcraft/use-font-in-web-component-51a4">Load
-                                                    external font with web component</a></p>
-
-                                            <h2>
-                                                <a name="conclusion" href="#conclusion">
-                                                </a>
-                                                Conclusion
-                                            </h2>
-
-                                            <p><strong>So, should we not use a web component?</strong> There is no
-                                                straightforward answer to it, nothing is perfect and everything comes
-                                                with some grey area. But we always have to weigh the pros and cons, and
-                                                ask the question, does web component solve that problem considering its
-                                                limitations?</p>
-
-                                            <p><strong>If you have reached here, then I did a satisfactory effort to
-                                                    keep you reading. Please be kind to leave any comments or ask for
-                                                    any corrections. <strong>Happy Learning!</strong></strong></p>
-                                        </div>
-
-                                    </div>
+                                    <p
+                                        style='margin:0in;line-height:150%;font-size:15px;font-family:"Arial",sans-serif;margin-bottom:10.0pt;text-align:justify;'>
+                                        <span
+                                            style='font-size:16px;line-height:150%;font-family:"Calibri",sans-serif;'>Buying
+                                            a new property in the UK can be overwhelming, especially for new homeowners.
+                                            However, you can streamline the process. What factor should you consider,
+                                            and how can a property review platform help? In this article, we will
+                                            explore a guide on how to buy a home in the UK and the role property review
+                                            platforms like <strong>Kijii</strong> play in helping you get your ideal
+                                            home!</span>
+                                    </p>
+                                    <h2
+                                        style='margin-top:.25in;margin-right:0in;margin-bottom:10.0pt;margin-left:0in;line-height:150%;font-size:21px;font-family:"Arial",sans-serif;font-weight:normal;text-align:justify;'>
+                                        <strong><span style='font-family:"Calibri",sans-serif;'>1. Ensure You Have the
+                                                Required Finances Needed</span></strong>
+                                    </h2>
+                                    <p
+                                        style='margin:0in;line-height:150%;font-size:15px;font-family:"Arial",sans-serif;margin-bottom:10.0pt;text-align:justify;'>
+                                        <span
+                                            style='font-size:16px;line-height:150%;font-family:"Calibri",sans-serif;'>Buying
+                                            a home of your choice might require that you get a mortgage. However, before
+                                            you can be granted a mortgage, you need to have 5% of the total sum of money
+                                            required to buy the property. For example, if you intend to get a house
+                                            worth 200,000 pounds, you will need to deposit a minimum of 10,000 pounds to
+                                            get a mortgage.&nbsp;</span>
+                                    </p>
+                                    <p
+                                        style='margin:0in;line-height:150%;font-size:15px;font-family:"Arial",sans-serif;margin-bottom:10.0pt;text-align:justify;'>
+                                        <span
+                                            style='font-size:16px;line-height:150%;font-family:"Calibri",sans-serif;'>Therefore,
+                                            it will be advisable to start getting your finances in order. You can do so
+                                            by saving up the required amount needed for the deposit. While saving up
+                                            this amount, make sure your credit score is good enough to get a mortgage.
+                                            If you&apos;ve got a bad credit score, it could hinder your chances of
+                                            getting a loan from lenders.&nbsp;</span>
+                                    </p>
+                                    <h2
+                                        style='margin-top:.25in;margin-right:0in;margin-bottom:10.0pt;margin-left:0in;line-height:150%;font-size:21px;font-family:"Arial",sans-serif;font-weight:normal;text-align:justify;'>
+                                        <strong><span style='font-family:"Calibri",sans-serif;'>2. Get to Know the
+                                                Amount You Can Borrow</span></strong>
+                                    </h2>
+                                    <p
+                                        style='margin:0in;line-height:150%;font-size:15px;font-family:"Arial",sans-serif;margin-bottom:10.0pt;text-align:justify;'>
+                                        <span
+                                            style='font-size:16px;line-height:150%;font-family:"Calibri",sans-serif;'>Mortgage
+                                            loans are taken by individuals who want to buy property. The mortgage loan
+                                            taken has to be of the same value as the property you intend to buy. The
+                                            repayment term for a mortgage loan can be up to 25 years. But this is
+                                            dependent on the mortgage provider you intend to use. To know the amount of
+                                            loan you are eligible for, you can use the nationwide mortgage calculator to
+                                            check. So with this calculator, you will be able to know the amount of
+                                            mortgage loan you can take.&nbsp;</span>
+                                    </p>
+                                    <h2
+                                        style='margin-top:.25in;margin-right:0in;margin-bottom:10.0pt;margin-left:0in;line-height:150%;font-size:21px;font-family:"Arial",sans-serif;font-weight:normal;text-align:justify;'>
+                                        <strong><span style='font-family:"Calibri",sans-serif;'>3. Hire a Property
+                                                Review Service</span></strong>
+                                    </h2>
+                                    <p
+                                        style='margin:0in;line-height:150%;font-size:15px;font-family:"Arial",sans-serif;margin-bottom:10.0pt;text-align:justify;'>
+                                        <span
+                                            style='font-size:16px;line-height:150%;font-family:"Calibri",sans-serif;'>When
+                                            you want to buy a house, it is essential to know the type of home you want
+                                            and the ideal area. It is a vital aspect that ensures that the homeowner
+                                            gets the best value for their money. Here you will need to enlist a Property
+                                            review service. Property review platforms help you find viewpoints on the
+                                            property you want to buy. The only people who can tell if a house is
+                                            suitable are those that have lived in it before. A Property review platform
+                                            like Kijii helps you get resident reviews from various properties in the UK.
+                                            The goal of enlisting the services of property review platforms like Kijii
+                                            is to ensure that you&apos;re getting your money&apos;s worth on any
+                                            property you want to buy.&nbsp;</span>
+                                    </p>
+                                    <h2
+                                        style='margin-top:.25in;margin-right:0in;margin-bottom:10.0pt;margin-left:0in;line-height:150%;font-size:21px;font-family:"Arial",sans-serif;font-weight:normal;text-align:justify;'>
+                                        <strong><span style='font-family:"Calibri",sans-serif;'>4. Go For a Property
+                                                Within Your Budget and Requirements</span></strong>
+                                    </h2>
+                                    <p
+                                        style='margin:0in;line-height:150%;font-size:15px;font-family:"Arial",sans-serif;margin-bottom:10.0pt;text-align:justify;'>
+                                        <span
+                                            style='font-size:16px;line-height:150%;font-family:"Calibri",sans-serif;'>Some
+                                            areas have costly homes in the UK. If the cost of houses within that region
+                                            falls within your budget, you can begin your search in those areas. Also,
+                                            the size of the house you want to buy matters.</span>
+                                    </p>
+                                    <p
+                                        style='margin:0in;line-height:150%;font-size:15px;font-family:"Arial",sans-serif;margin-bottom:10.0pt;text-align:justify;'>
+                                        <span
+                                            style='font-size:16px;line-height:150%;font-family:"Calibri",sans-serif;'>The
+                                            goal here is to get a home that suits your standard and preferences. There
+                                            might be a possibility that you won&apos;t get your desired home type in an
+                                            area you like. You might see your house preference in a location that
+                                            isn&apos;t your fancy. In such cases, you will need to think carefully
+                                            before deciding.&nbsp;</span>
+                                    </p>
+                                    <p
+                                        style='margin:0in;line-height:150%;font-size:15px;font-family:"Arial",sans-serif;margin-bottom:10.0pt;text-align:justify;'>
+                                        <span
+                                            style='font-size:16px;line-height:150%;font-family:"Calibri",sans-serif;'>You
+                                            should also consider the proximity to your work areas and the availability
+                                            of nearby schools for the kids. If you find out that the property you have
+                                            the desire to acquire is more expensive than your budget, you can save more
+                                            till you get the right amount to acquire that home, or you settle for
+                                            something within your budget. Another alternative is getting a mortgage
+                                            provider to give you the desired amount you need for the house.</span>
+                                    </p>
+                                    <h2
+                                        style='margin-top:.25in;margin-right:0in;margin-bottom:10.0pt;margin-left:0in;line-height:150%;font-size:21px;font-family:"Arial",sans-serif;font-weight:normal;text-align:justify;'>
+                                        <strong><span style='font-family:"Calibri",sans-serif;'>5. Learn About Various
+                                                Mortgages</span></strong>
+                                    </h2>
+                                    <p
+                                        style='margin:0in;line-height:150%;font-size:15px;font-family:"Arial",sans-serif;margin-bottom:10.0pt;text-align:justify;'>
+                                        <span
+                                            style='font-size:16px;line-height:150%;font-family:"Calibri",sans-serif;'>Before
+                                            applying for a mortgage, it is essential to conduct extensive research on
+                                            various mortgages. It is a vital aspect you should prioritize before
+                                            choosing your desired home. Therefore, make sure an excellent monetary plan
+                                            is in place.&nbsp;</span>
+                                    </p>
+                                    <h2
+                                        style='margin-top:.25in;margin-right:0in;margin-bottom:10.0pt;margin-left:0in;line-height:150%;font-size:21px;font-family:"Arial",sans-serif;font-weight:normal;text-align:justify;'>
+                                        <strong><span style='font-family:"Calibri",sans-serif;'>6. Have a Decision in
+                                                Principle</span></strong>
+                                    </h2>
+                                    <p
+                                        style='margin:0in;line-height:150%;font-size:15px;font-family:"Arial",sans-serif;margin-bottom:10.0pt;text-align:justify;'>
+                                        <span
+                                            style='font-size:16px;line-height:150%;font-family:"Calibri",sans-serif;'>The
+                                            Decision in Principle (DIP) is a form of certification issued by a mortgage
+                                            provider. This certification is a written agreement stating that the
+                                            mortgage lender is willing to loan you the amount you require to buy your
+                                            house. The validity of this certification is 30 days.&nbsp;</span>
+                                    </p>
+                                    <p
+                                        style='margin:0in;line-height:150%;font-size:15px;font-family:"Arial",sans-serif;margin-bottom:10.0pt;text-align:justify;'>
+                                        <span
+                                            style='font-size:16px;line-height:150%;font-family:"Calibri",sans-serif;'>However,
+                                            this differs from one mortgage lender to another. Most real estate companies
+                                            will ask for your DIP whenever they want to show you a property. Having a
+                                            DIP assures them of your seriousness in getting a mortgage loan. It will
+                                            also enable the real estate agent and the homebuyer to complete the sales
+                                            easily.</span>
+                                    </p>
+                                    <h2
+                                        style='margin-top:.25in;margin-right:0in;margin-bottom:10.0pt;margin-left:0in;line-height:150%;font-size:21px;font-family:"Arial",sans-serif;font-weight:normal;text-align:justify;'>
+                                        <strong><span style='font-family:"Calibri",sans-serif;'>7. Choose the Right
+                                                Realtor</span></strong>
+                                    </h2>
+                                    <p
+                                        style='margin:0in;line-height:150%;font-size:15px;font-family:"Arial",sans-serif;margin-bottom:10.0pt;text-align:justify;'>
+                                        <span
+                                            style='font-size:16px;line-height:150%;font-family:"Calibri",sans-serif;'>In
+                                            a real sense, individuals can buy a home without assistance from a real
+                                            estate agent. However, if you are buying for the first time, you need a
+                                            realtor. One thing is sure: Everyone needs professional assistance regarding
+                                            buying a property, and realtors help with that!</span>
+                                    </p>
+                                    <p
+                                        style='margin:0in;line-height:150%;font-size:15px;font-family:"Arial",sans-serif;margin-bottom:10.0pt;text-align:justify;'>
+                                        <span
+                                            style='font-size:16px;line-height:150%;font-family:"Calibri",sans-serif;'>However,
+                                            it would be ideal for you to choose the right realtor. There are cases where
+                                            most individuals have to ask for recommendations from their friends and
+                                            loved ones. Also, you can get a realtor from online directories. However,
+                                            when you find a prospective realtor, get to know their
+                                            references.&nbsp;</span>
+                                    </p>
+                                    <p
+                                        style='margin:0in;line-height:150%;font-size:15px;font-family:"Arial",sans-serif;margin-bottom:10.0pt;text-align:justify;'>
+                                        <span
+                                            style='font-size:16px;line-height:150%;font-family:"Calibri",sans-serif;'>One
+                                            of the best ways to do that is by getting reviews from past clients. Our
+                                            property review services at Kijii can help you with that. Kijii doesn&apos;t
+                                            just help you get reviews on the house you want to purchase. We also help
+                                            get reviews on the realtor in charge of brokering the deal.&nbsp;</span>
+                                    </p>
+                                    <p
+                                        style='margin:0in;line-height:150%;font-size:15px;font-family:"Arial",sans-serif;margin-bottom:10.0pt;text-align:justify;'>
+                                        <span
+                                            style='font-size:16px;line-height:150%;font-family:"Calibri",sans-serif;'>Whenever
+                                            you are enlisting the services of a realtor, be sure their interests are the
+                                            same as yours. It will help ensure that a successful deal is being brokered
+                                            between the buyer and seller of the property. So if you want a good home for
+                                            an affordable price, wait till the realtor comes up with an option that
+                                            suits your preference.&nbsp;</span>
+                                    </p>
+                                    <p
+                                        style='margin:0in;line-height:150%;font-size:15px;font-family:"Arial",sans-serif;margin-bottom:10.0pt;text-align:justify;'>
+                                        <span
+                                            style='font-size:16px;line-height:150%;font-family:"Calibri",sans-serif;'>However,
+                                            a deal that is closed quicker is most beneficial for realtors. However, many
+                                            realtors are more ethical and diligent when carrying out their job. Consult
+                                            with those ones.&nbsp;</span>
+                                    </p>
+                                    <h2
+                                        style='margin-top:.25in;margin-right:0in;margin-bottom:10.0pt;margin-left:0in;line-height:150%;font-size:21px;font-family:"Arial",sans-serif;font-weight:normal;text-align:justify;'>
+                                        <strong><span style='font-family:"Calibri",sans-serif;'>8. Begin Your
+                                                Search</span></strong>
+                                    </h2>
+                                    <p
+                                        style='margin:0in;line-height:150%;font-size:15px;font-family:"Arial",sans-serif;margin-bottom:10.0pt;text-align:justify;'>
+                                        <span
+                                            style='font-size:16px;line-height:150%;font-family:"Calibri",sans-serif;'>This
+                                            is where the real deal starts. When searching for your new home, use
+                                            property websites to make the search easier. You&apos;ll come across so many
+                                            property listings, and you will be able to choose from the many available
+                                            options.</span>
+                                    </p>
+                                    <p
+                                        style='margin:0in;line-height:150%;font-size:15px;font-family:"Arial",sans-serif;margin-bottom:10.0pt;text-align:justify;'>
+                                        <span
+                                            style='font-size:16px;line-height:150%;font-family:"Calibri",sans-serif;'>However,
+                                            it would also be great if you also carried out a physical inspection of the
+                                            apartment of your choice. Looking at the photos is excellent, but a physical
+                                            visit to the property is best. When checking the property, feel free to
+                                            forward any puzzling question to your realtor for a precise
+                                            answer.&nbsp;</span>
+                                    </p>
+                                    <h2
+                                        style='margin-top:.25in;margin-right:0in;margin-bottom:10.0pt;margin-left:0in;line-height:150%;font-size:21px;font-family:"Arial",sans-serif;font-weight:normal;text-align:justify;'>
+                                        <strong><span style='font-family:"Calibri",sans-serif;'>9. Make Your Offer on
+                                                the Property</span></strong>
+                                    </h2>
+                                    <p
+                                        style='margin:0in;line-height:150%;font-size:15px;font-family:"Arial",sans-serif;margin-bottom:10.0pt;text-align:justify;'>
+                                        <span
+                                            style='font-size:16px;line-height:150%;font-family:"Calibri",sans-serif;'>Once
+                                            you have narrowed down your search to your ideal choice, it&apos;s time to
+                                            make an offer on your choice of property. Here you will make a decision on
+                                            how much you are willing to offer. The number of people making offers for
+                                            the house you intend to buy also plays a significant role.&nbsp;</span>
+                                    </p>
+                                    <p
+                                        style='margin:0in;line-height:150%;font-size:15px;font-family:"Arial",sans-serif;margin-bottom:10.0pt;text-align:justify;'>
+                                        <span
+                                            style='font-size:16px;line-height:150%;font-family:"Calibri",sans-serif;'>It
+                                            would be ideal for you to find out the amount of other similar properties
+                                            around. If the amount of other similar properties is below the asking price,
+                                            make a lower offer. There are instances where your agent might tell you to
+                                            offer the highest price you intend to pay for the property. However, this
+                                            might not be a great idea as it won&apos;t give you the much-needed
+                                            advantage during the negotiation process.</span>
+                                    </p>
+                                    <h2
+                                        style='margin-top:.25in;margin-right:0in;margin-bottom:10.0pt;margin-left:0in;line-height:150%;font-size:21px;font-family:"Arial",sans-serif;font-weight:normal;text-align:justify;'>
+                                        <strong><span style='font-family:"Calibri",sans-serif;'>10. Offer Accepted. What
+                                                Does This Mean?</span></strong>
+                                    </h2>
+                                    <p
+                                        style='margin:0in;line-height:150%;font-size:15px;font-family:"Arial",sans-serif;margin-bottom:10.0pt;text-align:justify;'>
+                                        <span
+                                            style='font-size:16px;line-height:150%;font-family:"Calibri",sans-serif;'>When
+                                            your offer is accepted, it doesn&apos;t mean that the sale is completed.
+                                            There are no legally binding documents yet. Therefore, the seller can still
+                                            choose to back out of the deal if contracts between both parties are not yet
+                                            exchanged. You can talk to the seller to take the property out of the market
+                                            since you are close to acquiring it. However, you should know that there is
+                                            no obligation to hold the seller. As long as there is no binding document
+                                            between the seller and buyer, the seller can choose to back out.
+                                            &nbsp;</span>
+                                    </p>
+                                    <h2
+                                        style='margin-top:.25in;margin-right:0in;margin-bottom:10.0pt;margin-left:0in;line-height:150%;font-size:21px;font-family:"Arial",sans-serif;font-weight:normal;text-align:justify;'>
+                                        <strong><span style='font-family:"Calibri",sans-serif;'>11. Apply for a Mortgage
+                                                and Begin the Property Valuation</span></strong>
+                                    </h2>
+                                    <p
+                                        style='margin:0in;line-height:150%;font-size:15px;font-family:"Arial",sans-serif;margin-bottom:10.0pt;text-align:justify;'>
+                                        <span
+                                            style='font-size:16px;line-height:150%;font-family:"Calibri",sans-serif;'>At
+                                            this time, you must have made your pick from the available mortgage
+                                            providers. Now you are sure of your mortgage option. The mortgage lender
+                                            will make available a check that will be displayed on your credit report.
+                                            Should your application get turned down by the lender, you should find out
+                                            why instead of immediately applying for another mortgage option. Making
+                                            wrong conclusions can affect your credit score, so you need to be sure
+                                            before going for another mortgage option.&nbsp;</span>
+                                    </p>
+                                    <p
+                                        style='margin:0in;line-height:150%;font-size:15px;font-family:"Arial",sans-serif;margin-bottom:10.0pt;text-align:justify;'>
+                                        <span
+                                            style='font-size:16px;line-height:150%;font-family:"Calibri",sans-serif;'>Once
+                                            your mortgage application has been approved, the lender conducts a property
+                                            valuation to determine if the property is worth the amount you are willing
+                                            to pay. The lender also checks for issues with the property to see if any
+                                            red flags could lead to extra costs. Once the valuation is completed, you
+                                            can begin talks with the seller.&nbsp;</span>
+                                    </p>
+                                    <p
+                                        style='margin:0in;line-height:150%;font-size:15px;font-family:"Arial",sans-serif;margin-bottom:10.0pt;text-align:justify;'>
+                                        <span
+                                            style='font-size:16px;line-height:150%;font-family:"Calibri",sans-serif;'>Here,
+                                            you can negotiate a lower price if you feel that necessary repairs need to
+                                            be done on the property. Formal offers for mortgage loans are approved
+                                            within four weeks of your application. The offer validity is for six months.
+                                            Also, you should note that most mortgage providers want home insurance for
+                                            your house before lending. So you might want to have home insurance before
+                                            applying for your mortgage loan.</span>
+                                    </p>
+                                    <h2
+                                        style='margin-top:.25in;margin-right:0in;margin-bottom:10.0pt;margin-left:0in;line-height:150%;font-size:21px;font-family:"Arial",sans-serif;font-weight:normal;text-align:justify;'>
+                                        <strong><span style='font-family:"Calibri",sans-serif;'>12. Get a Home
+                                                Insurance</span></strong>
+                                    </h2>
+                                    <p
+                                        style='margin:0in;line-height:150%;font-size:15px;font-family:"Arial",sans-serif;margin-bottom:10.0pt;text-align:justify;'>
+                                        <span
+                                            style='font-size:16px;line-height:150%;font-family:"Calibri",sans-serif;'>Home
+                                            insurance is a condition given by most mortgage providers. Once an exchange
+                                            has been completed between you and the seller, you are legally the owner of
+                                            the property. So if anything catastrophic happens to the building after the
+                                            exchange without home insurance, you won&apos;t be covered.&nbsp;</span>
+                                    </p>
+                                    <h2
+                                        style='margin-top:.25in;margin-right:0in;margin-bottom:10.0pt;margin-left:0in;line-height:150%;font-size:21px;font-family:"Arial",sans-serif;font-weight:normal;text-align:justify;'>
+                                        <strong><span style='font-family:"Calibri",sans-serif;'>13. Exchange of the
+                                                Contracts</span></strong>
+                                    </h2>
+                                    <p
+                                        style='margin:0in;line-height:150%;font-size:15px;font-family:"Arial",sans-serif;margin-bottom:10.0pt;text-align:justify;'>
+                                        <span
+                                            style='font-size:16px;line-height:150%;font-family:"Calibri",sans-serif;'>At
+                                            this point, the sale becomes bound legally. The seller&apos;s solicitor and
+                                            yours will carry out an exchange of the signed contracts. After this, you
+                                            make the payment to complete the process.</span>
+                                    </p>
+                                    <h2
+                                        style='margin-top:.25in;margin-right:0in;margin-bottom:10.0pt;margin-left:0in;line-height:150%;font-size:21px;font-family:"Arial",sans-serif;font-weight:normal;text-align:justify;'>
+                                        <strong><span style='font-family:"Calibri",sans-serif;'>14. Completing the
+                                                Process and Moving in</span></strong>
+                                    </h2>
+                                    <p
+                                        style='margin:0in;line-height:150%;font-size:15px;font-family:"Arial",sans-serif;margin-bottom:10.0pt;text-align:justify;'>
+                                        <span
+                                            style='font-size:16px;line-height:150%;font-family:"Calibri",sans-serif;'>The
+                                            completion takes place two weeks after the contract exchange. At this stage,
+                                            the money has already been successfully paid to the seller and the keys
+                                            transferred to the buyer&apos;s custody. The property now belongs to
+                                            you.&nbsp;</span>
+                                    </p>
+                                    <p
+                                        style='margin:0in;line-height:150%;font-size:15px;font-family:"Arial",sans-serif;margin-bottom:10.0pt;text-align:justify;'>
+                                        <span
+                                            style='font-size:16px;line-height:150%;font-family:"Calibri",sans-serif;'>You
+                                            can now start carrying out maintenance work on the various areas necessary
+                                            for your new home. Then you begin the fun aspect of decorating and
+                                            furnishing your home according to your preference. Take a moment to reflect
+                                            on your win and success and enjoy your new home.</span>
+                                    </p>
+                                    <h2
+                                        style='margin-top:.25in;margin-right:0in;margin-bottom:10.0pt;margin-left:0in;line-height:150%;font-size:21px;font-family:"Arial",sans-serif;font-weight:normal;text-align:justify;'>
+                                        <strong><span style='font-family:"Calibri",sans-serif;'>Final
+                                                Thoughts</span></strong>
+                                    </h2>
+                                    <p
+                                        style='margin:0in;line-height:150%;font-size:15px;font-family:"Arial",sans-serif;margin-bottom:10.0pt;text-align:justify;'>
+                                        <span
+                                            style='font-size:16px;line-height:150%;font-family:"Calibri",sans-serif;'>When
+                                            you plan to buy a home, the process can be quite tedious and lengthy. But
+                                            with these tips we&rsquo;ve discussed, you can have a smooth ride. Get to
+                                            know the processes listed in this article before going for a home
+                                            purchase!</span>
+                                    </p>
+                                    <p
+                                        style='margin:0in;line-height:150%;font-size:15px;font-family:"Arial",sans-serif;margin-bottom:10.0pt;text-align:justify;'>
+                                        <strong><em><span
+                                                    style='font-size:16px;line-height:150%;font-family:"Calibri",sans-serif;'>Download
+                                                    the Kijii app and register to read what previous property users have
+                                                    said concerning your proposed home today. You can also drop your
+                                                    review on the property you are vacating.</span></em></strong>
+                                    </p>
+                                    <p
+                                        style='margin:0in;line-height:115%;font-size:15px;font-family:"Arial",sans-serif;'>
+                                        &nbsp;</p>
                                 </article>
                                 <!-- /.post -->
                             </div>
@@ -199,7 +446,9 @@
                                 </div>
                             </div>
                             <!-- /.author-info -->
-                            <p>Full-Stack Software Engineer, developing end-to-end software application by handling coding, database, platform, and GUI in Java, JavaScript libraries, and other programming languages..</p>
+                            <p>Full-Stack Software Engineer, developing end-to-end software application by handling
+                                coding, database, platform, and GUI in Java, JavaScript libraries, and other programming
+                                languages..</p>
                             <nav class="nav social">
                                 <a href="#"><i class="uil uil-twitter"></i></a>
                                 <a href="#"><i class="uil uil-facebook-f"></i></a>

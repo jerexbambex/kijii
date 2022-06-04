@@ -1,12 +1,14 @@
 <footer class="text-inverse" style="background: #00568B;">
     <div class="container pt-15 pt-md-17 pb-13 pb-md-15">
         <div class="d-lg-flex flex-row align-items-lg-center">
-            <h3 class="display-4 mb-6 mb-lg-0 pe-lg-20 pe-xl-22 pe-xxl-25 text-white">Join our community by using
-                our services and grow your business.</h3>
+            <h3 class="display-4 mb-6 mb-lg-0 pe-lg-20 pe-xl-22 pe-xxl-25 text-white">Get Familiar With Our Process.
+            <br>
+            <span class="lead">Our process is seamless and easy to understand. All information about you is safe with us. We pay close attention to details as we gather experiences from tenants and landlords all over London</span>
+            </h3>
             {{-- <a href="#" class="btn btn-outline-primary rounded-pill mb-0 text-nowrap">Try It For Free</a> --}}
-            <a href="#" class="btn btn-expand btn-soft-primary rounded-pill">
+            <a href="{{ route('contactUs') }}" class="btn btn-expand btn-soft-primary rounded-pill">
                 <i class="uil uil-arrow-right"></i>
-                <span>Try It For Free</span>
+                <span>Contact Us</span>
             </a>
         </div>
         <!--/div -->

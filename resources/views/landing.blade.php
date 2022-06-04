@@ -11,12 +11,11 @@
                 <div class="col-md-10 col-lg-8 col-xl-8 col-xxl-6 mx-auto mb-13" data-cues="slideInDown"
                     data-group="page-title">
                     <h1 class="display-1 mb-4">Choosing a new home to buy or rent has never been this easy</h1>
-                    <p class="lead fs-lg px-xl-12 px-xxl-6 mb-7">Easily achieve your saving goals. Have all your recurring
-                        and one time expenses and incomes in one place.</p>
+                    <p class="lead fs-lg px-xl-12 px-xxl-6 mb-7">Take your property hunting to the next level. Get first-hand information about your choice property in the UK.</p>
                     <div class="d-flex justify-content-center" data-cues="slideInDown" data-group="page-title-buttons"
                         data-delay="600">
                         <span><a class="btn btn-primary rounded-pill mx-1">Get Started</a></span>
-                        <span><a class="btn btn-soft-blue rounded-pill mx-1">Free Trial</a></span>
+                        {{-- <span><a class="btn btn-soft-blue rounded-pill mx-1">Free Trial</a></span> --}}
                     </div>
                 </div>
                 <!-- /column -->
@@ -211,7 +210,7 @@
             <div class="row text-center">
                 <div class="col-md-10 offset-md-1 col-lg-8 offset-lg-2">
                   <h2 class="fs-15 text-uppercase text-muted mb-3">What We Do?</h2>
-                  <h3 class="display-4 mb-10 px-xl-10">The service we offer is specifically designed to meet your needs.</h3>
+                  <h3 class="display-4 mb-10 px-xl-10">We offer a wide range of property reviews for potential homeowners and tenants, making us a leading property review agency.</h3>
                 </div>
                 <!-- /column -->
               </div>
@@ -224,9 +223,9 @@
                     <div class="card shadow-lg">
                       <div class="card-body">
                         <img src="/front/assets/img/icons/lineal/search-2.svg" class="svg-inject icon-svg icon-svg-md text-yellow mb-3" alt="" />
-                        <h4>SEO Services</h4>
-                        <p class="mb-2">Nulla vitae elit libero, a pharetra augue. Donec id elit non mi porta gravida at eget metus cras justo.</p>
-                        <a href="#" class="more hover link-yellow">Learn More</a>
+                        <h4>Landlord Review</h4>
+                        <p class="mb-2">Kijii is a landlord and home review platform. Residents leave reviews about their living experiences on our platform. When you enter a new tenancy or take out a mortgage, you will usually sign a 6 to 12-month contract or a 35-year loan. You’re obligated to pay a substantial amount of money each month. Surely, it is important to have many viewpoints before taking this critical step.</p>
+                        {{-- <a href="#" class="more hover link-yellow">Learn More</a> --}}
                       </div>
                       <!--/.card-body -->
                     </div>
@@ -237,9 +236,9 @@
                     <div class="card shadow-lg">
                       <div class="card-body">
                         <img src="/front/assets/img/icons/lineal/browser.svg" class="svg-inject icon-svg icon-svg-md text-red mb-3" alt="" />
-                        <h4>Web Design</h4>
-                        <p class="mb-2">Nulla vitae elit libero, a pharetra augue. Donec id elit non mi porta gravida at eget metus cras justo.</p>
-                        <a href="#" class="more hover link-red">Learn More</a>
+                        <h4>Property Review</h4>
+                        <p class="mb-2">We believe that one should have all information about a building before committing their finances. Let us help you make the right decision and the best one.</p>
+                        {{-- <a href="#" class="more hover link-red">Learn More</a> --}}
                       </div>
                       <!--/.card-body -->
                     </div>
@@ -250,9 +249,9 @@
                     <div class="card shadow-lg">
                       <div class="card-body">
                         <img src="/front/assets/img/icons/lineal/chat-2.svg" class="svg-inject icon-svg icon-svg-md text-green mb-3" alt="" />
-                        <h4>Social Engagement</h4>
-                        <p class="mb-2">Nulla vitae elit libero, a pharetra augue. Donec id elit non mi porta gravida at eget metus cras justo.</p>
-                        <a href="#" class="more hover link-green">Learn More</a>
+                        <h4>Real Estate Consultancy </h4>
+                        <p class="mb-2">Let us give you the advice you need. We do not sugarcoat or lie to you because we believe that truth is the bedrock of any successful business.</p>
+                        {{-- <a href="#" class="more hover link-green">Learn More</a> --}}
                       </div>
                       <!--/.card-body -->
                     </div>
@@ -263,9 +262,9 @@
                     <div class="card shadow-lg">
                       <div class="card-body">
                         <img src="/front/assets/img/icons/lineal/megaphone.svg" class="svg-inject icon-svg icon-svg-md text-blue mb-3" alt="" />
-                        <h4>Content Marketing</h4>
-                        <p class="mb-2">Nulla vitae elit libero, a pharetra augue. Donec id elit non mi porta gravida at eget metus cras justo.</p>
-                        <a href="#" class="more hover link-blue">Learn More</a>
+                        <h4>Industry Directory</h4>
+                        <p class="mb-2">We offer you an A-Z list of all the major developers in the UK. When you pick a developer, you will see their current developments, rating, and address. You're also allowed to update the directory with information about the developers you've worked with.</p>
+                        {{-- <a href="#" class="more hover link-blue">Learn More</a> --}}
                       </div>
                       <!--/.card-body -->
                     </div>
@@ -284,13 +283,13 @@
         <div class="container py-14 py-md-16">
           <div class="row gx-lg-8 gx-xl-12 gy-10 align-items-center">
             <div class="col-lg-7 order-lg-2">
-              <figure><img class="w-auto" src="/front/assets/img/illustrations/i7.png" srcset="/front/assets/img/illustrations/i7@2x.png 2x" alt="" /></figure>
+              <figure><img class="w-auto" src="/front/assets/img/illustrations/3d6.png" srcset="/front/assets/img/illustrations/3d6@2x.png 2x" alt="" /></figure>
             </div>
             <!--/column -->
             <div class="col-lg-5">
-              <h3 class="display-4 mb-5">We make your spending stress-free for you to have the perfect control.</h3>
-              <p class="mb-6">Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
-              <div class="row gy-3">
+              <h3 class="display-4 mb-5">We provide real time information about properties in your desired location</h3>
+              <p class="mb-6">At Kijii, we believe that the best information about a living area comes from the people there. We ask residents several questions about what it's like to live in the building. Our questions are based on design, facilities, landlord, management, and value. We also ask people to tell us the best features of the home.</p>
+              {{-- <div class="row gy-3">
                 <div class="col-xl-6">
                   <ul class="icon-list bullet-bg bullet-soft-primary mb-0">
                     <li><span><i class="uil uil-check"></i></span><span>Aenean quam ornare. Curabitur blandit.</span></li>
@@ -305,7 +304,7 @@
                   </ul>
                 </div>
                 <!--/column -->
-              </div>
+              </div> --}}
               <!--/.row -->
             </div>
             <!--/column -->
@@ -336,26 +335,26 @@
             <!--/.row -->
             <div class="row text-center mt-12">
                 <div class="col-lg-9 mx-auto">
-                    <h3 class="display-4 mb-0 text-center px-xl-10 px-xxl-15">Find out everything you need to know about
-                        creating a business process model</h3>
+                    <h3 class="display-4 mb-0 text-center px-xl-10 px-xxl-15">Work With Our 3-Tier Review Process</h3>
+                    <p>Have you ever wanted to move to a place, and you wished you had the superpower of knowing what the living experience of that place would feel like? Well, we at Kijii have made your wish possible. With our review process, you get to know. We use three methods for our review process.</p>
                     <div class="row gx-lg-8 gx-xl-12 process-wrapper text-center mt-9" data-cues="slideInUp"
                         data-group="process">
                         <div class="col-md-4"> <img src="/front/assets/img/icons/lineal/shield.svg"
                                 class="svg-inject icon-svg icon-svg-md text-red mb-3" alt="" />
-                            <h4 class="mb-1">1. Secured Transactions</h4>
-                            <p>Etiam porta malesuada magna mollis euismod sem.</p>
+                            <h4 class="mb-1">1. House Review</h4>
+                            <p>You can review the house you want to move in anywhere in London. For instance, if you want to move to an area in Bristol, you can search for that location and apartment using our website. All information you need concerning the living conditions of that apartment will be made available to you. So, you don't need to pay and then find out when you can find out before you pay.</p>
                         </div>
                         <!--/column -->
                         <div class="col-md-4"> <img src="/front/assets/img/icons/lineal/savings.svg"
                                 class="svg-inject icon-svg icon-svg-md text-green mb-3" alt="" />
-                            <h4 class="mb-1">2. Budget Planning</h4>
-                            <p>Etiam porta malesuada magna mollis euismod sem.</p>
+                            <h4 class="mb-1">2. Landlord/Agent Review</h4>
+                            <p>If you've never had a bad landlord, you won't understand why it is important to know your landlord before meeting them. A bad landlord can make your stay in an apartment very unpleasant. Bad landlords can also hide certain information about the house from you so that they can collect your money. At Kijii, we have, through the experiences of other people, get adequate information about the landlords of many houses in London.</p>
                         </div>
                         <!--/column -->
                         <div class="col-md-4"> <img src="/front/assets/img/icons/lineal/loading.svg"
                                 class="svg-inject icon-svg icon-svg-md text-yellow mb-3" alt="" />
-                            <h4 class="mb-1">3. Up to Date</h4>
-                            <p>Etiam porta malesuada magna mollis euismod sem.</p>
+                            <h4 class="mb-1">3. Neighborhood Review</h4>
+                            <p>Some areas are unsafe, especially if you are raising kids or pets. Often, agents will intentionally refuse to disclose all the information about a neighborhood. We have reviewed many neighborhoods in London and have ranked them on our website according to their level of safety. On our website, you will see good areas for new couples, small families, large families, families with pets, single persons, families with senior citizens, and more.</p>
                         </div>
                         <!--/column -->
                     </div>
@@ -368,7 +367,7 @@
         <!-- /.container -->
     </section>
     <!-- /section -->
-    <section class="wrapper bg-light">
+    {{-- <section class="wrapper bg-light">
         <div class="container py-14 py-md-17">
             <div class="row gx-lg-8 gx-xl-12 gy-6 mb-14 align-items-center">
                 <div class="col-lg-7 position-relative">
@@ -497,9 +496,9 @@
             <!-- /div -->
         </div>
         <!-- /.container -->
-    </section>
+    </section> --}}
     <!-- /section -->
-    <section class="wrapper bg-light">
+    {{-- <section class="wrapper bg-light">
         <div class="container py-14 py-md-16">
           <h2 class="display-4 mb-3">How We Do It?</h2>
           <p class="lead fs-lg mb-8">We make your spending <span class="underline">stress-free</span> for you to have the perfect control.</p>
@@ -528,22 +527,21 @@
           <!--/.row -->
         </div>
         <!-- /.container -->
-      </section>
+    </section> --}}
       <!-- /section -->
     <section class="wrapper image-wrapper bg-auto no-overlay bg-image text-center bg-map"
         data-image-src="/front/assets/img/map.png">
         <div class="container pt-0 pb-14 pt-md-18 pb-md-18">
             <div class="row">
                 <div class="col-lg-10 col-xl-9 col-xxl-8 mx-auto">
-                    <h3 class="display-4 mb-8 px-lg-12">We are trusted by over 5000+ clients. Join them now and grow your
-                        business.</h3>
+                    <h3 class="display-4 mb-8 px-lg-12">We are trusted by over 5000+ clients. Join them now.</h3>
                 </div>
                 <!-- /column -->
             </div>
             <!-- /.row -->
             <div class="d-flex justify-content-center" data-cues="slideInDown" data-group="join">
-                <span><a class="btn btn-primary rounded mx-1">Get Started</a></span>
-                <span><a class="btn btn-green rounded mx-1">Free Trial</a></span>
+                <span><a href="{{ route('contactUs') }}" class="btn btn-primary rounded mx-1">Get Started</a></span>
+                {{-- <span><a class="btn btn-green rounded mx-1">Free Trial</a></span> --}}
             </div>
         </div>
         <!-- /.container -->

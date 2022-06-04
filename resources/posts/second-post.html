@@ -7,7 +7,7 @@
                         <a href="#" class="hover" rel="category">Teamwork</a>
                     </div>
                     <!-- /.post-category -->
-                    <h1 class="display-1 mb-4">Create Reusable Web Components in HTML</h1>
+                    <h1 class="display-1 mb-4">What To Look Out for When Renting a Property in the UK</h1>
                     <ul class="post-meta mb-5">
                         <li class="post-date"><i class="uil uil-calendar-alt"></i><span>5 Jul 2021</span></li>
                         <li class="post-author"><a href="#"><i class="uil uil-user"></i><span>By Kijii</span></a></li>
@@ -31,7 +31,9 @@
             <div class="col-lg-10 mx-auto">
                 <div class="blog single mt-n17">
                     <div class="card">
-                        <figure class="card-img-top"><img src="https://community.webcomponents.dev/images/7pcIzObHSxPwFkDgy5i7YunRPXwtMpZbK1_E2n1BN34/s:1000:420/mb:500000/ar:1/aHR0cHM6Ly9jb21t/dW5pdHkud2ViY29t/cG9uZW50cy5kZXYv/cmVtb3RlaW1hZ2Vz/L3VwbG9hZHMvYXJ0/aWNsZXMvcHZoNHp0/cG13NndhNTFtODBj/czEucG5n" alt="" /></figure>
+                        <figure class="card-img-top"><img
+                                src="/front/assets/img/blog/Picture2.png"
+                                alt="" /></figure>
                         <div class="card-body">
                             <div class="classic-view">
                                 <article class="crayons-card crayons-article mb-4" id="article-show-container"
@@ -40,513 +42,353 @@
                                     data-published="true" data-pin-path="/stories/feed/pinned_article"
                                     data-pinned-article-id="3">
 
-                                    <div class="crayons-article__main">
-
-                                        <div class="crayons-article__body text-styles spec__body" data-article-id="38"
-                                            id="article-body">
-
-                                            <p>With the introduction of Web Components, it becomes easy to solve this
-                                                problem and to create reusable HTML components.</p>
-
-                                            <p>In this article, we'll learn about Web Components in-depth, the easiest
-                                                way to create custom HTML elements.</p>
-
-                                            <h2>
-                                                <a name="what-are-web-components" href="#what-are-web-components">
-                                                </a>
-                                                What are Web Components?
-                                            </h2>
-
-                                            <blockquote>
-                                                <p>It is a suite of different technologies allowing you to create
-                                                    reusable custom elements — with their functionality encapsulated
-                                                    away from the rest of your code — and utilize them in your web apps.
-                                                </p>
-                                            </blockquote>
-
-                                            <p>It consists of three main technologies: </p>
-
-                                            <ol>
-                                                <li>
-                                                    <p><strong>HTML templates</strong> : The "template" and "slot"<br>
-                                                        elements enable you to write markup templates that are not
-                                                        displayed on the rendered page. These can then be reused
-                                                        multiple times as the basis of a custom element's structure.</p>
-                                                </li>
-                                                <li>
-                                                    <p><strong>Custom elements</strong> : A set of JavaScript APIs that
-                                                        allow you to define custom elements and their behavior, which
-                                                        can then be used as desired in your user interface.</p>
-                                                </li>
-                                                <li>
-                                                    <p><strong>Shadow DOM</strong> : A set of JavaScript APIs for
-                                                        attaching an encapsulated "shadow" DOM tree to an element —
-                                                        which is rendered separately from the main document DOM — and
-                                                        controlling associated functionality.</p>
-                                                </li>
-                                            </ol>
-
-                                            <p>In this article, we'll discuss about the <strong>Shadow DOM</strong>
-                                                implementation.</p>
-
-                                            <p><em>Shadow DOM</em> refers to the ability of the browser to include a
-                                                subtree of DOM elements into the rendering of a document, but not into
-                                                the main document DOM tree.</p>
-
-                                            <p>It allows hidden DOM trees to be attached to elements in the regular DOM
-                                                tree — this shadow DOM tree starts with a shadow root, underneath which
-                                                can be attached to any elements you want, in the same way as the normal
-                                                DOM.</p>
-
-                                            <p><a href="https://community.webcomponents.dev/images/d56Dvq62JMGyC4unhJZXnURRcvEgCf2B5RTggMH5XOg/w:880/mb:500000/ar:1/aHR0cHM6Ly9jZG4u/aGFzaG5vZGUuY29t/L3Jlcy9oYXNobm9k/ZS9pbWFnZS91cGxv/YWQvdjE2MDg1Nzkx/MjI3NDAvQTVaUmlW/NW5rLnBuZw"
-                                                    class="article-body-image-wrapper"><img
-                                                        src="https://community.webcomponents.dev/images/d56Dvq62JMGyC4unhJZXnURRcvEgCf2B5RTggMH5XOg/w:880/mb:500000/ar:1/aHR0cHM6Ly9jZG4u/aGFzaG5vZGUuY29t/L3Jlcy9oYXNobm9k/ZS9pbWFnZS91cGxv/YWQvdjE2MDg1Nzkx/MjI3NDAvQTVaUmlW/NW5rLnBuZw"
-                                                        alt="shadow-dom.png" loading="lazy" width="880"
-                                                        height="420"></a></p>
-
-                                            <p>There are some terminologies related to shadow DOM :</p>
-
-                                            <ul>
-                                                <li>
-                                                    <em>Shadow host:</em> The regular DOM node that the shadow DOM is
-                                                    attached to.
-                                                </li>
-                                                <li>
-                                                    <em>Shadow tree:</em> The DOM tree inside the shadow DOM.
-                                                </li>
-                                                <li>
-                                                    <em>Shadow boundary:</em> the place where the shadow DOM ends, and
-                                                    the regular DOM begins.
-                                                </li>
-                                                <li>
-                                                    <em>Shadow root:</em> The root node of the shadow tree.
-                                                </li>
-                                            </ul>
-
-                                            <p>Let's understand this with a simple example:-</p>
-
-                                            <p><strong>Step 1: Create a Class Definition</strong> </p>
-
-                                            <p>To begin with, in our header.js file we define a class called Header,
-                                                which extends HTMLElement:<br>
-                                            </p>
-
-                                            <div class="highlight js-code-highlight">
-                                                <pre class="highlight javascript"><code><span class="kd">class</span> <span class="nx">Header</span> <span class="kd">extends</span> <span class="nx">HTMLElement</span> <span class="p">{</span>
-                              <span class="kd">constructor</span><span class="p">()</span> <span class="p">{</span>
-                                <span class="c1">// Always call super first in constructor</span>
-                                <span class="k">super</span><span class="p">();</span>
-
-                                <span class="c1">// write element functionality in here</span>
-                                <span class="p">...</span>
-                              <span class="p">}</span>
-                            <span class="p">}</span>
-                            </code></pre>
-                                                <div class="highlight__panel js-actions-panel">
-                                                    <div class="highlight__panel-action js-fullscreen-code-action">
-                                                        <svg xmlns="http://www.w3.org/2000/svg" width="20px"
-                                                            height="20px" viewBox="0 0 24 24"
-                                                            class="highlight-action crayons-icon highlight-action--fullscreen-on">
-                                                            <title>Enter fullscreen mode</title>
-                                                            <path
-                                                                d="M16 3h6v6h-2V5h-4V3zM2 3h6v2H4v4H2V3zm18 16v-4h2v6h-6v-2h4zM4 19h4v2H2v-6h2v4z">
-                                                            </path>
-                                                        </svg>
-
-                                                        <svg xmlns="http://www.w3.org/2000/svg" width="20px"
-                                                            height="20px" viewBox="0 0 24 24"
-                                                            class="highlight-action crayons-icon highlight-action--fullscreen-off">
-                                                            <title>Exit fullscreen mode</title>
-                                                            <path
-                                                                d="M18 7h4v2h-6V3h2v4zM8 9H2V7h4V3h2v6zm10 8v4h-2v-6h6v2h-4zM8 15v6H6v-4H2v-2h6z">
-                                                            </path>
-                                                        </svg>
-
-                                                    </div>
-                                                </div>
-                                            </div>
-
-
-
-                                            <p>Inside the class definition, we define the element's constructor, which
-                                                defines all the functionality the element will have when an instance of
-                                                it is instantiated.</p>
-
-                                            <p><strong>Step 2: Create Shadow Root</strong></p>
-
-                                            <p>We first attach a shadow root to the custom element:<br>
-                                            </p>
-
-                                            <div class="highlight js-code-highlight">
-                                                <pre class="highlight javascript"><code><span class="c1">// Create a shadow root</span>
-                            <span class="kd">const</span> <span class="nx">shadowRoot</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">attachShadow</span><span class="p">({</span> <span class="na">mode</span><span class="p">:</span> <span class="dl">'</span><span class="s1">open</span><span class="dl">'</span> <span class="p">});</span>
-                            </code></pre>
-                                                <div class="highlight__panel js-actions-panel">
-                                                    <div class="highlight__panel-action js-fullscreen-code-action">
-                                                        <svg xmlns="http://www.w3.org/2000/svg" width="20px"
-                                                            height="20px" viewBox="0 0 24 24"
-                                                            class="highlight-action crayons-icon highlight-action--fullscreen-on">
-                                                            <title>Enter fullscreen mode</title>
-                                                            <path
-                                                                d="M16 3h6v6h-2V5h-4V3zM2 3h6v2H4v4H2V3zm18 16v-4h2v6h-6v-2h4zM4 19h4v2H2v-6h2v4z">
-                                                            </path>
-                                                        </svg>
-
-                                                        <svg xmlns="http://www.w3.org/2000/svg" width="20px"
-                                                            height="20px" viewBox="0 0 24 24"
-                                                            class="highlight-action crayons-icon highlight-action--fullscreen-off">
-                                                            <title>Exit fullscreen mode</title>
-                                                            <path
-                                                                d="M18 7h4v2h-6V3h2v4zM8 9H2V7h4V3h2v6zm10 8v4h-2v-6h6v2h-4zM8 15v6H6v-4H2v-2h6z">
-                                                            </path>
-                                                        </svg>
-
-                                                    </div>
-                                                </div>
-                                            </div>
-
-
-
-                                            <p>There are two options for <strong>'mode'</strong> : <em>'open' * &amp;
-                                                    *'closed'</em>.</p>
-
-                                            <p><strong>mode: open</strong> means that you can access the shadow DOM
-                                                using JavaScript written in the main page context.</p>
-
-                                            <p>If you attach a shadow root to a custom element with *<em>mode: closed
-                                                    *</em> set, you won't be able to access the shadow DOM from the
-                                                outside — myCustomElem.shadowRoot returns null.</p>
-
-                                            <p><strong>Step 3: Creating the Shadow DOM Structure</strong></p>
-
-                                            <p>Next, we use some DOM manipulation to create the element's internal
-                                                shadow DOM structure:<br>
-                                            </p>
-
-                                            <div class="highlight js-code-highlight">
-                                                <pre class="highlight javascript"><code><span class="kd">const</span> <span class="nx">headerTemplate</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="dl">'</span><span class="s1">template</span><span class="dl">'</span><span class="p">);</span>
-                            <span class="nx">headerTemplate</span><span class="p">.</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="s2">`
-
-                            &lt;div&gt;
-                                &lt;div class="header"&gt;
-                                    &lt;h1&gt; Header - My First Blog on Web Component &lt;/h1&gt;
-                                &lt;/div&gt;
-                            &lt;/div&gt;`</span>
-                            </code></pre>
-                                                <div class="highlight__panel js-actions-panel">
-                                                    <div class="highlight__panel-action js-fullscreen-code-action">
-                                                        <svg xmlns="http://www.w3.org/2000/svg" width="20px"
-                                                            height="20px" viewBox="0 0 24 24"
-                                                            class="highlight-action crayons-icon highlight-action--fullscreen-on">
-                                                            <title>Enter fullscreen mode</title>
-                                                            <path
-                                                                d="M16 3h6v6h-2V5h-4V3zM2 3h6v2H4v4H2V3zm18 16v-4h2v6h-6v-2h4zM4 19h4v2H2v-6h2v4z">
-                                                            </path>
-                                                        </svg>
-
-                                                        <svg xmlns="http://www.w3.org/2000/svg" width="20px"
-                                                            height="20px" viewBox="0 0 24 24"
-                                                            class="highlight-action crayons-icon highlight-action--fullscreen-off">
-                                                            <title>Exit fullscreen mode</title>
-                                                            <path
-                                                                d="M18 7h4v2h-6V3h2v4zM8 9H2V7h4V3h2v6zm10 8v4h-2v-6h6v2h-4zM8 15v6H6v-4H2v-2h6z">
-                                                            </path>
-                                                        </svg>
-
-                                                    </div>
-                                                </div>
-                                            </div>
-
-
-
-                                            <p><strong>Step 4: Attaching the shadow DOM to the shadow root</strong></p>
-
-                                            <p>The final step is to attach all the created elements to the shadow
-                                                root.<br>
-                                                <strong>connectedCallback</strong> runs each time your custom element is
-                                                inserted into the DOM.<br>
-                                            </p>
-
-                                            <div class="highlight js-code-highlight">
-                                                <pre class="highlight javascript"><code><span class="nx">connectedCallback</span><span class="p">()</span> <span class="p">{</span>
-                                    <span class="kd">const</span> <span class="nx">shadowRoot</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">attachShadow</span><span class="p">({</span> <span class="na">mode</span><span class="p">:</span> <span class="dl">'</span><span class="s1">closed</span><span class="dl">'</span> <span class="p">});</span>
-                                    <span class="nx">shadowRoot</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">headerTemplate</span><span class="p">.</span><span class="nx">content</span><span class="p">);</span>
-                            <span class="p">}</span>
-                            </code></pre>
-                                                <div class="highlight__panel js-actions-panel">
-                                                    <div class="highlight__panel-action js-fullscreen-code-action">
-                                                        <svg xmlns="http://www.w3.org/2000/svg" width="20px"
-                                                            height="20px" viewBox="0 0 24 24"
-                                                            class="highlight-action crayons-icon highlight-action--fullscreen-on">
-                                                            <title>Enter fullscreen mode</title>
-                                                            <path
-                                                                d="M16 3h6v6h-2V5h-4V3zM2 3h6v2H4v4H2V3zm18 16v-4h2v6h-6v-2h4zM4 19h4v2H2v-6h2v4z">
-                                                            </path>
-                                                        </svg>
-
-                                                        <svg xmlns="http://www.w3.org/2000/svg" width="20px"
-                                                            height="20px" viewBox="0 0 24 24"
-                                                            class="highlight-action crayons-icon highlight-action--fullscreen-off">
-                                                            <title>Exit fullscreen mode</title>
-                                                            <path
-                                                                d="M18 7h4v2h-6V3h2v4zM8 9H2V7h4V3h2v6zm10 8v4h-2v-6h6v2h-4zM8 15v6H6v-4H2v-2h6z">
-                                                            </path>
-                                                        </svg>
-
-                                                    </div>
-                                                </div>
-                                            </div>
-
-
-
-                                            <p><strong>Step 5: Styling the shadow DOM</strong></p>
-
-                                            <p>After that we create a style element and populate it with some CSS to
-                                                style it:<br>
-                                            </p>
-
-                                            <div class="highlight js-code-highlight">
-                                                <pre class="highlight javascript"><code><span class="kd">const</span> <span class="nx">headerTemplate</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="dl">'</span><span class="s1">template</span><span class="dl">'</span><span class="p">);</span>
-                            <span class="nx">headerTemplate</span><span class="p">.</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="s2">`
-
-                            &lt;style&gt;
-                                .header{
-                                    text-align: center;
-                                }
-                                h1{
-                                    color: blue;
-                                }
-                            &lt;/style&gt;
-
-                            &lt;div&gt;
-                                &lt;div class="header"&gt;
-                                    &lt;h1&gt; Header - My First Blog on Web Component &lt;/h1&gt;
-                                &lt;/div&gt;
-                            &lt;/div&gt;
-                            `</span>
-
-                            </code></pre>
-                                                <div class="highlight__panel js-actions-panel">
-                                                    <div class="highlight__panel-action js-fullscreen-code-action">
-                                                        <svg xmlns="http://www.w3.org/2000/svg" width="20px"
-                                                            height="20px" viewBox="0 0 24 24"
-                                                            class="highlight-action crayons-icon highlight-action--fullscreen-on">
-                                                            <title>Enter fullscreen mode</title>
-                                                            <path
-                                                                d="M16 3h6v6h-2V5h-4V3zM2 3h6v2H4v4H2V3zm18 16v-4h2v6h-6v-2h4zM4 19h4v2H2v-6h2v4z">
-                                                            </path>
-                                                        </svg>
-
-                                                        <svg xmlns="http://www.w3.org/2000/svg" width="20px"
-                                                            height="20px" viewBox="0 0 24 24"
-                                                            class="highlight-action crayons-icon highlight-action--fullscreen-off">
-                                                            <title>Exit fullscreen mode</title>
-                                                            <path
-                                                                d="M18 7h4v2h-6V3h2v4zM8 9H2V7h4V3h2v6zm10 8v4h-2v-6h6v2h-4zM8 15v6H6v-4H2v-2h6z">
-                                                            </path>
-                                                        </svg>
-
-                                                    </div>
-                                                </div>
-                                            </div>
-
-
-
-                                            <p>In the above example, we apply a style to the Shadow DOM using a style
-                                                element, but it is perfectly possible to do it by referencing an
-                                                external stylesheet from a "link" element instead.<br>
-                                            </p>
-
-                                            <div class="highlight js-code-highlight">
-                                                <pre class="highlight javascript"><code><span class="kd">const</span> <span class="nx">headerTemplate</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="dl">'</span><span class="s1">template</span><span class="dl">'</span><span class="p">);</span>
-                            <span class="nx">headerTemplate</span><span class="p">.</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="s2">`
-
-                            &lt;link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"&gt;
-                            &lt;link href="css/style.css" rel="stylesheet"&gt;
-
-                            </span></code></pre>
-                                                <div class="highlight__panel js-actions-panel">
-                                                    <div class="highlight__panel-action js-fullscreen-code-action">
-                                                        <svg xmlns="http://www.w3.org/2000/svg" width="20px"
-                                                            height="20px" viewBox="0 0 24 24"
-                                                            class="highlight-action crayons-icon highlight-action--fullscreen-on">
-                                                            <title>Enter fullscreen mode</title>
-                                                            <path
-                                                                d="M16 3h6v6h-2V5h-4V3zM2 3h6v2H4v4H2V3zm18 16v-4h2v6h-6v-2h4zM4 19h4v2H2v-6h2v4z">
-                                                            </path>
-                                                        </svg>
-
-                                                        <svg xmlns="http://www.w3.org/2000/svg" width="20px"
-                                                            height="20px" viewBox="0 0 24 24"
-                                                            class="highlight-action crayons-icon highlight-action--fullscreen-off">
-                                                            <title>Exit fullscreen mode</title>
-                                                            <path
-                                                                d="M18 7h4v2h-6V3h2v4zM8 9H2V7h4V3h2v6zm10 8v4h-2v-6h6v2h-4zM8 15v6H6v-4H2v-2h6z">
-                                                            </path>
-                                                        </svg>
-
-                                                    </div>
-                                                </div>
-                                            </div>
-
-
-
-                                            <p>Your resultant <em>header.js file</em> will look like this:<br>
-                                            </p>
-
-                                            <div class="highlight js-code-highlight">
-                                                <pre class="highlight javascript"><code><span class="kd">const</span> <span class="nx">headerTemplate</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="dl">'</span><span class="s1">template</span><span class="dl">'</span><span class="p">);</span>
-                            <span class="nx">headerTemplate</span><span class="p">.</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="s2">`
-
-                            &lt;style&gt;
-                                .header{
-                                    text-align: center;
-                                }
-                                h1{
-                                    color: blue;
-                                }
-                            &lt;/style&gt;
-
-                            &lt;div&gt;
-                                &lt;div class="header"&gt;
-                                    &lt;h1&gt; Header - My First Blog on Web Component &lt;/h1&gt;
-                                &lt;/div&gt;
-                            &lt;/div&gt;
-                            `</span>
-
-                            <span class="kd">class</span> <span class="nx">Header</span> <span class="kd">extends</span> <span class="nx">HTMLElement</span> <span class="p">{</span>
-                                <span class="kd">constructor</span><span class="p">()</span> <span class="p">{</span>
-                                    <span class="c1">// Always call super first in constructor</span>
-                                    <span class="k">super</span><span class="p">();</span>
-                                <span class="p">}</span>
-
-                                <span class="nx">connectedCallback</span><span class="p">()</span> <span class="p">{</span>
-                                    <span class="kd">const</span> <span class="nx">shadowRoot</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">attachShadow</span><span class="p">({</span> <span class="na">mode</span><span class="p">:</span> <span class="dl">'</span><span class="s1">open</span><span class="dl">'</span> <span class="p">});</span>
-                                    <span class="nx">shadowRoot</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">headerTemplate</span><span class="p">.</span><span class="nx">content</span><span class="p">);</span>
-                                <span class="p">}</span>
-                            <span class="p">}</span>
-
-                            <span class="nx">customElements</span><span class="p">.</span><span class="nx">define</span><span class="p">(</span><span class="dl">'</span><span class="s1">header-component</span><span class="dl">'</span><span class="p">,</span> <span class="nx">Header</span><span class="p">);</span>
-                            </code></pre>
-                                                <div class="highlight__panel js-actions-panel">
-                                                    <div class="highlight__panel-action js-fullscreen-code-action">
-                                                        <svg xmlns="http://www.w3.org/2000/svg" width="20px"
-                                                            height="20px" viewBox="0 0 24 24"
-                                                            class="highlight-action crayons-icon highlight-action--fullscreen-on">
-                                                            <title>Enter fullscreen mode</title>
-                                                            <path
-                                                                d="M16 3h6v6h-2V5h-4V3zM2 3h6v2H4v4H2V3zm18 16v-4h2v6h-6v-2h4zM4 19h4v2H2v-6h2v4z">
-                                                            </path>
-                                                        </svg>
-
-                                                        <svg xmlns="http://www.w3.org/2000/svg" width="20px"
-                                                            height="20px" viewBox="0 0 24 24"
-                                                            class="highlight-action crayons-icon highlight-action--fullscreen-off">
-                                                            <title>Exit fullscreen mode</title>
-                                                            <path
-                                                                d="M18 7h4v2h-6V3h2v4zM8 9H2V7h4V3h2v6zm10 8v4h-2v-6h6v2h-4zM8 15v6H6v-4H2v-2h6z">
-                                                            </path>
-                                                        </svg>
-
-                                                    </div>
-                                                </div>
-                                            </div>
-
-
-
-                                            <p><strong>Step 6: Import your component into HTML file</strong></p>
-
-                                            <p>Create an <em>index.html</em> file and add your custom header component
-                                                to it.<br>
-                                            </p>
-
-                                            <div class="highlight js-code-highlight">
-                                                <pre class="highlight html"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
-                            <span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">"en"</span><span class="nt">&gt;</span>
-
-                            <span class="nt">&lt;head&gt;</span>
-                                <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"UTF-8"</span><span class="nt">&gt;</span>
-                                <span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"viewport"</span> <span class="na">content=</span><span class="s">"width=device-width, initial-scale=1.0"</span><span class="nt">&gt;</span>
-                                <span class="nt">&lt;title&gt;</span>Web Components<span class="nt">&lt;/title&gt;</span>
-                                <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"header.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
-                            <span class="nt">&lt;/head&gt;</span>
-
-                            <span class="nt">&lt;body&gt;</span>
-                                <span class="nt">&lt;header-component&gt;&lt;/header-component&gt;</span>
-                            <span class="nt">&lt;/body&gt;</span>
-
-                            <span class="nt">&lt;/html&gt;</span>
-                            </code></pre>
-                                                <div class="highlight__panel js-actions-panel">
-                                                    <div class="highlight__panel-action js-fullscreen-code-action">
-                                                        <svg xmlns="http://www.w3.org/2000/svg" width="20px"
-                                                            height="20px" viewBox="0 0 24 24"
-                                                            class="highlight-action crayons-icon highlight-action--fullscreen-on">
-                                                            <title>Enter fullscreen mode</title>
-                                                            <path
-                                                                d="M16 3h6v6h-2V5h-4V3zM2 3h6v2H4v4H2V3zm18 16v-4h2v6h-6v-2h4zM4 19h4v2H2v-6h2v4z">
-                                                            </path>
-                                                        </svg>
-
-                                                        <svg xmlns="http://www.w3.org/2000/svg" width="20px"
-                                                            height="20px" viewBox="0 0 24 24"
-                                                            class="highlight-action crayons-icon highlight-action--fullscreen-off">
-                                                            <title>Exit fullscreen mode</title>
-                                                            <path
-                                                                d="M18 7h4v2h-6V3h2v4zM8 9H2V7h4V3h2v6zm10 8v4h-2v-6h6v2h-4zM8 15v6H6v-4H2v-2h6z">
-                                                            </path>
-                                                        </svg>
-
-                                                    </div>
-                                                </div>
-                                            </div>
-
-
-
-                                            <p>Now run index.html in browser:</p>
-
-                                            <p><a href="https://community.webcomponents.dev/images/qtkXGCVGEHoy2dj4d4kqi8BYYBuFyWWT9Se6ZCR_7bE/w:880/mb:500000/ar:1/aHR0cHM6Ly9jZG4u/aGFzaG5vZGUuY29t/L3Jlcy9oYXNobm9k/ZS9pbWFnZS91cGxv/YWQvdjE2MDg1ODYw/ODYzMjQvUHZZUDdQ/c0hYLnBuZw"
-                                                    class="article-body-image-wrapper"><img
-                                                        src="https://community.webcomponents.dev/images/qtkXGCVGEHoy2dj4d4kqi8BYYBuFyWWT9Se6ZCR_7bE/w:880/mb:500000/ar:1/aHR0cHM6Ly9jZG4u/aGFzaG5vZGUuY29t/L3Jlcy9oYXNobm9k/ZS9pbWFnZS91cGxv/YWQvdjE2MDg1ODYw/ODYzMjQvUHZZUDdQ/c0hYLnBuZw"
-                                                        alt="image.png" loading="lazy" width="396" height="515"></a></p>
-
-                                            <p><a href="https://community.webcomponents.dev/images/VXHbw7YwiuZeRbJJTybSZQNSrUcmF5nJOgiVBlmwLL8/w:880/mb:500000/ar:1/aHR0cHM6Ly9jZG4u/aGFzaG5vZGUuY29t/L3Jlcy9oYXNobm9k/ZS9pbWFnZS91cGxv/YWQvdjE2MDg1ODU0/MjE0NzkvVnZzMTBu/N3ZKLnBuZw"
-                                                    class="article-body-image-wrapper"><img
-                                                        src="https://community.webcomponents.dev/images/VXHbw7YwiuZeRbJJTybSZQNSrUcmF5nJOgiVBlmwLL8/w:880/mb:500000/ar:1/aHR0cHM6Ly9jZG4u/aGFzaG5vZGUuY29t/L3Jlcy9oYXNobm9k/ZS9pbWFnZS91cGxv/YWQvdjE2MDg1ODU0/MjE0NzkvVnZzMTBu/N3ZKLnBuZw"
-                                                        alt="image.png" loading="lazy" width="859" height="413"></a></p>
-
-                                            <p>Congrats!! you have created your first custom HTML component.</p>
-
-                                            <p>
-                                            <div class="ff-container ff-ready ff-active"><button type="button"
-                                                    class="c-btn gif-button fs-s gap-2"
-                                                    aria-label="Pause animation playback" aria-pressed="false"><svg
-                                                        class="crayons-icon gif-play" width="24" height="24"
-                                                        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                        <path
-                                                            d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10ZM10.622 8.415a.4.4 0 0 0-.622.332v6.506a.4.4 0 0 0 .622.332l4.879-3.252a.4.4 0 0 0 0-.666l-4.88-3.252h.001Z">
-                                                        </path>
-                                                    </svg><svg class="crayons-icon gif-pause" width="24" height="24"
-                                                        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                        <path
-                                                            d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10ZM9 9v6h2V9H9Zm4 0v6h2V9h-2Z">
-                                                        </path>
-                                                    </svg>GIF</button>
-                                                <canvas class="ff-canvas ff-canvas-ready" width="480" height="217">
-                                                </canvas><img
-                                                    src="https://community.webcomponents.dev/images/rA7iLntm70QoCUt9qmlYmAfziZUFaj75WtRooe1G3Xc/w:880/mb:500000/ar:1/aHR0cHM6Ly9jZG4u/aGFzaG5vZGUuY29t/L3Jlcy9oYXNobm9k/ZS9pbWFnZS91cGxv/YWQvdjE2MDg1ODUw/OTUzNzMvT2FTeEhV/ek9vLmdpZg"
-                                                    alt="fun.gif" loading="lazy" width="480" height="217"
-                                                    data-animated="true" id="animated-1" class="ff-image">
-                                            </div>
-                                            </p>
-
-                                            <p>Thank you for reading. This is the first time that I wrote any blog
-                                                article. I hope you enjoyed reading it.</p>
-
-
-                                        </div>
-
-                                    </div>
+                                    <p
+                                        style='margin:0in;line-height:150%;font-size:15px;font-family:"Arial",sans-serif;margin-bottom:10.0pt;text-align:justify;'>
+                                        <span
+                                            style='font-size:16px;line-height:150%;font-family:"Calibri",sans-serif;'>Whether
+                                            you&apos;re moving into an apartment for the first time or making a second
+                                            move, renting an apartment is an exciting endeavour. However, finding a good
+                                            apartment comes with many challenges, and no matter how versed you are in
+                                            apartment renting, the process can be overwhelming. But with the right
+                                            information, apartment hunting can become an enjoyable process. In this
+                                            article, we&rsquo;ll outline what to look out for when renting a property in
+                                            the UK!</span></p>
+                                    <h2
+                                        style='margin-top:.25in;margin-right:0in;margin-bottom:10.0pt;margin-left:0in;line-height:150%;font-size:21px;font-family:"Arial",sans-serif;font-weight:normal;text-align:justify;'>
+                                        <strong><span style='font-family:"Calibri",sans-serif;'>Pros and Cons of
+                                                Renting</span></strong><span
+                                            style='font-family:"Calibri",sans-serif;'>&nbsp;</span></h2>
+                                    <p
+                                        style='margin:0in;line-height:150%;font-size:15px;font-family:"Arial",sans-serif;margin-bottom:10.0pt;text-align:justify;'>
+                                        <span
+                                            style='font-size:16px;line-height:150%;font-family:"Calibri",sans-serif;'>Just
+                                            like everything else, renting an apartment comes with its challenges. While
+                                            there are many good aspects of property renting in the UK, there are some
+                                            drawbacks. Nevertheless, the first and most reliable step is to use an
+                                            excellent property review site like <strong>Kijii</strong>.&nbsp;</span></p>
+                                    <p
+                                        style='margin:0in;line-height:150%;font-size:15px;font-family:"Arial",sans-serif;margin-bottom:10.0pt;text-align:justify;'>
+                                        <span
+                                            style='font-size:16px;line-height:150%;font-family:"Calibri",sans-serif;'>With
+                                            this hint, let&rsquo;s explore the pros and cons of renting a property
+                                            below:</span></p>
+                                    <h3
+                                        style='margin-top:16.0pt;margin-right:0in;margin-bottom:10.0pt;margin-left:0in;line-height:150%;font-size:19px;font-family:"Arial",sans-serif;color:#434343;font-weight:normal;text-align:justify;'>
+                                        <strong><span style='font-family:"Calibri",sans-serif;'>Advantages of
+                                                Renting</span></strong><span
+                                            style='font-family:"Calibri",sans-serif;'>&nbsp;</span></h3>
+                                    <ul style="list-style-type: undefined;margin-left:0in;">
+                                        <li><span style='font-family:"Calibri",sans-serif;'>The primary responsibility
+                                                for maintaining the property falls on the landlord. If there is a fault,
+                                                all you have to do is inform the landlord, and it will be
+                                                fixed.&nbsp;</span></li>
+                                        <li><span style='font-family:"Calibri",sans-serif;'>There is a lot of
+                                                flexibility. For example, if you are using a monthly lease option, you
+                                                can decide to move out within a twinkling of an eye. With the
+                                                flexibility, you&apos;re not tied down to a location.</span></li>
+                                        <li><span style='font-family:"Calibri",sans-serif;'>In most cases, renting an
+                                                apartment is a cheaper option than buying. Websites like
+                                                <strong>Kijii</strong> show a list of all the apartments in significant
+                                                areas in London to choose from.</span></li>
+                                        <li><span style='font-family:"Calibri",sans-serif;'>If you move and travel
+                                                frequently, you will benefit from renting an apartment as the burden of
+                                                maintenance doesn&apos;t fall on you.&nbsp;</span></li>
+                                    </ul>
+                                    <h3
+                                        style='margin-top:16.0pt;margin-right:0in;margin-bottom:10.0pt;margin-left:0in;line-height:150%;font-size:19px;font-family:"Arial",sans-serif;color:#434343;font-weight:normal;text-align:justify;'>
+                                        <strong><span style='font-family:"Calibri",sans-serif;'>Disadvantages of
+                                                Renting</span></strong><span
+                                            style='font-family:"Calibri",sans-serif;'>&nbsp;</span></h3>
+                                    <ul style="list-style-type: undefined;margin-left:0in;">
+                                        <li><span style='font-family:"Calibri",sans-serif;'>The landlord has the freedom
+                                                to increase your rent at any time.</span></li>
+                                        <li><span style='font-family:"Calibri",sans-serif;'>The rules of the lease
+                                                agreement may be restrictive. If the lease agreement doesn&apos;t allow
+                                                pets, then you can&apos;t bring them.</span></li>
+                                        <li><span style='font-family:"Calibri",sans-serif;'>Renting a property
+                                                doesn&apos;t come with any tax benefits.</span></li>
+                                        <li><span style='font-family:"Calibri",sans-serif;'>You may not be allowed to
+                                                modify the house without your landlord&apos;s approval.&nbsp;</span>
+                                        </li>
+                                        <li><span style='font-family:"Calibri",sans-serif;'>If real estate value
+                                                increases, there is a chance that your landlord may evict
+                                                you.&nbsp;</span></li>
+                                        <li><span style='font-family:"Calibri",sans-serif;'>There is no opportunity for
+                                                you to build your equity when you rent. So yes, the apartment will be
+                                                your home, but it won&apos;t be an asset for you.&nbsp;</span></li>
+                                    </ul>
+                                    <h2
+                                        style='margin-top:.25in;margin-right:0in;margin-bottom:10.0pt;margin-left:0in;line-height:150%;font-size:21px;font-family:"Arial",sans-serif;font-weight:normal;text-align:justify;'>
+                                        <strong><span style='font-family:"Calibri",sans-serif;'>Factors To Consider When
+                                                Renting a Property in the Uk</span></strong></h2>
+                                    <p
+                                        style='margin:0in;line-height:150%;font-size:15px;font-family:"Arial",sans-serif;margin-bottom:10.0pt;text-align:justify;'>
+                                        <span
+                                            style='font-size:16px;line-height:150%;font-family:"Calibri",sans-serif;'>It
+                                            is estimated that over five million people in the Uk live in rented
+                                            apartments. This has caused the government to set up rules protecting
+                                            renters from vicious landlords. Also, review sites like
+                                            <strong>Kijii</strong> allow renters to have all the information about a
+                                            landlord before renting an apartment.&nbsp;</span></p>
+                                    <p
+                                        style='margin:0in;line-height:150%;font-size:15px;font-family:"Arial",sans-serif;margin-bottom:10.0pt;text-align:justify;'>
+                                        <span
+                                            style='font-size:16px;line-height:150%;font-family:"Calibri",sans-serif;'>Before
+                                            renting an apartment, it is vital to know all the requirements. It can be
+                                            frustrating to rent an apartment you thought you liked, only to move in and
+                                            find many things you missed. The following points highlight some factors to
+                                            consider when renting an apartment:</span></p>
+                                    <h3
+                                        style='margin-top:16.0pt;margin-right:0in;margin-bottom:10.0pt;margin-left:0in;line-height:150%;font-size:19px;font-family:"Arial",sans-serif;color:#434343;font-weight:normal;text-align:justify;'>
+                                        <strong><span style='font-family:"Calibri",sans-serif;'>1. Use a Property Review
+                                                Site</span></strong><span
+                                            style='font-family:"Calibri",sans-serif;'>&nbsp;</span></h3>
+                                    <p
+                                        style='margin:0in;line-height:150%;font-size:15px;font-family:"Arial",sans-serif;margin-bottom:10.0pt;text-align:justify;'>
+                                        <span
+                                            style='font-size:16px;line-height:150%;font-family:"Calibri",sans-serif;'>Whether
+                                            it is a no-pet policy, bad living conditions, awful landlord, or noisy
+                                            neighbours, there are a lot you deserve to know before you commit your
+                                            finances to rent. When you use <strong>Kijii</strong>, you can review the
+                                            house you want to move in anywhere in London. For instance, if you want to
+                                            move to an area in Manchester, you can search for that location and
+                                            apartment using our website/app. All information you need concerning the
+                                            living conditions of that apartment will be made available to you. So, you
+                                            will not find out something horrible about the apartment after
+                                            payment.&nbsp;</span></p>
+                                    <h3
+                                        style='margin-top:16.0pt;margin-right:0in;margin-bottom:10.0pt;margin-left:0in;line-height:150%;font-size:19px;font-family:"Arial",sans-serif;color:#434343;font-weight:normal;text-align:justify;'>
+                                        <strong><span style='font-family:"Calibri",sans-serif;'>2.
+                                                Expenses</span></strong><span
+                                            style='font-family:"Calibri",sans-serif;'>&nbsp;</span></h3>
+                                    <p
+                                        style='margin:0in;line-height:150%;font-size:15px;font-family:"Arial",sans-serif;margin-bottom:10.0pt;text-align:justify;'>
+                                        <span
+                                            style='font-size:16px;line-height:150%;font-family:"Calibri",sans-serif;'>The
+                                            next thing you need to consider before hunting for an apartment is your
+                                            budget. You need to check the monthly cost of the apartment and know if you
+                                            can afford it. Imagine finding a great apartment only to realise that you
+                                            can&apos;t afford it. So, it is best to check your finances before starting
+                                            any process. You should avoid putting yourself through unwarranted
+                                            disappointment and work out your finances.&nbsp;</span></p>
+                                    <p
+                                        style='margin:0in;line-height:150%;font-size:15px;font-family:"Arial",sans-serif;margin-bottom:10.0pt;text-align:justify;'>
+                                        <span
+                                            style='font-size:16px;line-height:150%;font-family:"Calibri",sans-serif;'>Your
+                                            budget should include living costs, gas, internet, cable, and council tax.
+                                            Some of these things can add to the expenses and make the cost of the
+                                            apartment more expensive. Usually, old houses will cost more than modern
+                                            apartments because of heating. A rule of thumb is to ensure that your rent
+                                            apartment is under thirty percent of your monthly income. This would help
+                                            you to save on your monthly expenses.&nbsp;</span></p>
+                                    <h3
+                                        style='margin-top:16.0pt;margin-right:0in;margin-bottom:10.0pt;margin-left:0in;line-height:150%;font-size:19px;font-family:"Arial",sans-serif;color:#434343;font-weight:normal;text-align:justify;'>
+                                        <strong><span style='font-family:"Calibri",sans-serif;'>3.
+                                                Location</span></strong><span
+                                            style='font-family:"Calibri",sans-serif;'>&nbsp;</span></h3>
+                                    <p
+                                        style='margin:0in;line-height:150%;font-size:15px;font-family:"Arial",sans-serif;margin-bottom:10.0pt;text-align:justify;'>
+                                        <span
+                                            style='font-size:16px;line-height:150%;font-family:"Calibri",sans-serif;'>Location
+                                            is also an essential factor to consider before you rent an apartment. The
+                                            area must be a preferred choice for you. Whatever location you choose will
+                                            be a part of your everyday living. For example, your location will determine
+                                            where you shop, where your kids will go to school, and your closeness to a
+                                            hospital. All these are essential factors to consider when choosing a
+                                            location. Also, verify the safety of the areas.&nbsp;</span></p>
+                                    <p
+                                        style='margin:0in;line-height:150%;font-size:15px;font-family:"Arial",sans-serif;margin-bottom:10.0pt;text-align:justify;'>
+                                        <span
+                                            style='font-size:16px;line-height:150%;font-family:"Calibri",sans-serif;'>A
+                                            good property review site like <strong>Kijii</strong> is tailored for these
+                                            situations. Property review sites will give you all the information you need
+                                            concerning a particular location based on the feedback of people that have
+                                            lived there. When armed with such information, you can easily decide which
+                                            location suits you best without stepping foot in it.&nbsp;</span></p>
+                                    <p
+                                        style='margin:0in;line-height:150%;font-size:15px;font-family:"Arial",sans-serif;margin-bottom:10.0pt;text-align:justify;'>
+                                        <span
+                                            style='font-size:16px;line-height:150%;font-family:"Calibri",sans-serif;'>An
+                                            apartment close to your place of work and kids&apos; school will save you
+                                            money on transportation. However, properties located near tube stations will
+                                            cost more. But, they are beneficial in the long run.&nbsp;</span></p>
+                                    <h3
+                                        style='margin-top:16.0pt;margin-right:0in;margin-bottom:10.0pt;margin-left:0in;line-height:150%;font-size:19px;font-family:"Arial",sans-serif;color:#434343;font-weight:normal;text-align:justify;'>
+                                        <strong><span style='font-family:"Calibri",sans-serif;'>4. House
+                                                Size&nbsp;</span></strong></h3>
+                                    <p
+                                        style='margin:0in;line-height:150%;font-size:15px;font-family:"Arial",sans-serif;margin-bottom:10.0pt;text-align:justify;'>
+                                        <span
+                                            style='font-size:16px;line-height:150%;font-family:"Calibri",sans-serif;'>After
+                                            determining the apartment&apos;s location, the next factor to consider is
+                                            the size of the apartment. If you live alone, you may not need a very large
+                                            apartment. Remember, the bigger the apartment, the more expensive it will
+                                            likely be. You must ask questions like, &quot;Will the apartment has enough
+                                            space for me and my kids?&quot; &quot;Does it have enough room to
+                                            accommodate visitors?&quot;</span></p>
+                                    <p
+                                        style='margin:0in;line-height:150%;font-size:15px;font-family:"Arial",sans-serif;margin-bottom:10.0pt;text-align:justify;'>
+                                        <span
+                                            style='font-size:16px;line-height:150%;font-family:"Calibri",sans-serif;'>It
+                                            is important to get honest answers to these questions before committing.
+                                            <strong>Kijii&nbsp;</strong>is there to answer you because we have a list of
+                                            major apartments in the UK listed on our site according to size and price.
+                                            Of course, if you opt for a bigger apartment, you will pay more for
+                                            utility.&nbsp;</span></p>
+                                    <h3
+                                        style='margin-top:16.0pt;margin-right:0in;margin-bottom:10.0pt;margin-left:0in;line-height:150%;font-size:19px;font-family:"Arial",sans-serif;color:#434343;font-weight:normal;text-align:justify;'>
+                                        <strong><span style='font-family:"Calibri",sans-serif;'>5. Pet-free or
+                                                Not</span></strong></h3>
+                                    <p
+                                        style='margin:0in;line-height:150%;font-size:15px;font-family:"Arial",sans-serif;margin-bottom:10.0pt;text-align:justify;'>
+                                        <span
+                                            style='font-size:16px;line-height:150%;font-family:"Calibri",sans-serif;'>Whether
+                                            you are a pet owner or you plan to own pets in the future, you need to know
+                                            if your potential apartment is a pet-free apartment. Pets could be noisy, so
+                                            some apartments don&apos;t allow them. In extreme cases, pets can be
+                                            dangerous to other tenants in an apartment. Ask whether pets are allowed in
+                                            the apartment you plan to move to. If you use a property review site like
+                                            <strong>Kijii</strong>, you will see a list of apartments that allow pets
+                                            and those that don&apos;t. If pets are allowed, you should check if there
+                                            are parks nearby where you can take your pet. This is especially important
+                                            for dog owners. Do not sneak pets into an apartment where they are not
+                                            allowed. If your landlord finds out you sneaked a pet, you stand a chance of
+                                            being evicted.&nbsp;</span></p>
+                                    <h3
+                                        style='margin-top:16.0pt;margin-right:0in;margin-bottom:10.0pt;margin-left:0in;line-height:150%;font-size:19px;font-family:"Arial",sans-serif;color:#434343;font-weight:normal;text-align:justify;'>
+                                        <strong><span style='font-family:"Calibri",sans-serif;'>6. Viewing
+                                                Process</span></strong><span
+                                            style='font-family:"Calibri",sans-serif;'>&nbsp;</span></h3>
+                                    <p
+                                        style='margin:0in;line-height:150%;font-size:15px;font-family:"Arial",sans-serif;margin-bottom:10.0pt;text-align:justify;'>
+                                        <span
+                                            style='font-size:16px;line-height:150%;font-family:"Calibri",sans-serif;'>Sites
+                                            like Kijii have pictures of potential houses you intend to rent. It also
+                                            highlights the amenities in the houses. Some houses look good online but
+                                            don&apos;t look great when you visit. On the other hand, some houses may not
+                                            be so great online but excellent when you check them out in real life.
+                                            However, with <strong>Kijii,&nbsp;</strong>what you see on the website is
+                                            what you get!&nbsp;</span></p>
+                                    <h3
+                                        style='margin-top:16.0pt;margin-right:0in;margin-bottom:10.0pt;margin-left:0in;line-height:150%;font-size:19px;font-family:"Arial",sans-serif;color:#434343;font-weight:normal;text-align:justify;'>
+                                        <strong><span style='font-family:"Calibri",sans-serif;'>7. Deposit
+                                                Protection&nbsp;</span></strong></h3>
+                                    <p
+                                        style='margin:0in;line-height:150%;font-size:15px;font-family:"Arial",sans-serif;margin-bottom:10.0pt;text-align:justify;'>
+                                        <span
+                                            style='font-size:16px;line-height:150%;font-family:"Calibri",sans-serif;'>The
+                                            deposit you make on properties rented in the UK is protected. The tenancy
+                                            deposit protection scheme protects the deposits. Your landlord is obligated
+                                            to put your money in the scheme. They also tell you where they have kept the
+                                            money within thirty days of you giving them the money. The tenancy deposit
+                                            scheme aims to protect you and your interest. So, it is essential to ask
+                                            your landlord about it before you move in. You should count it as a red flag
+                                            if your landlord is dodgy about placing your deposit in the
+                                            scheme.&nbsp;</span></p>
+                                    <h2
+                                        style='margin-top:.25in;margin-right:0in;margin-bottom:10.0pt;margin-left:0in;line-height:150%;font-size:21px;font-family:"Arial",sans-serif;font-weight:normal;text-align:justify;'>
+                                        <strong><span style='font-family:"Calibri",sans-serif;'>Tips on Getting Cheaper
+                                                Rent for an Apartment</span></strong><span
+                                            style='font-family:"Calibri",sans-serif;'>&nbsp;</span></h2>
+                                    <p
+                                        style='margin:0in;line-height:150%;font-size:15px;font-family:"Arial",sans-serif;margin-bottom:10.0pt;text-align:justify;'>
+                                        <span
+                                            style='font-size:16px;line-height:150%;font-family:"Calibri",sans-serif;'>It
+                                            is one thing to get an apartment; it is another thing to get an apartment
+                                            that won&rsquo;t make you break the bank. With the rising cost of rent, one
+                                            has to be resourceful in getting an apartment. You can negotiate lower
+                                            rates, but it is an art and requires a lot of creative ability. Below are
+                                            some steps to get cheaper rents on apartments in the UK:</span></p>
+                                    <h3
+                                        style='margin-top:16.0pt;margin-right:0in;margin-bottom:10.0pt;margin-left:0in;line-height:150%;font-size:19px;font-family:"Arial",sans-serif;color:#434343;font-weight:normal;text-align:justify;'>
+                                        <strong><span style='font-family:"Calibri",sans-serif;'>1. Stay Informed About
+                                                Your Local Market</span></strong><span
+                                            style='font-family:"Calibri",sans-serif;'>&nbsp;</span></h3>
+                                    <p
+                                        style='margin:0in;line-height:150%;font-size:15px;font-family:"Arial",sans-serif;margin-bottom:10.0pt;text-align:justify;'>
+                                        <span
+                                            style='font-size:16px;line-height:150%;font-family:"Calibri",sans-serif;'>You
+                                            can stay informed by using Kijii. With Kijii, you can type whatever your
+                                            location is in London, and you will get the rent prices in your area. If the
+                                            prices change, the website will update to the new price. When you are
+                                            informed about the rent price, you will be in a better position to
+                                            negotiate. It is a bigger advantage for you in the high vacancy rates in an
+                                            area, and there are a lot of empty apartments.&nbsp;</span></p>
+                                    <h3
+                                        style='margin-top:16.0pt;margin-right:0in;margin-bottom:10.0pt;margin-left:0in;line-height:150%;font-size:19px;font-family:"Arial",sans-serif;color:#434343;font-weight:normal;text-align:justify;'>
+                                        <strong><span style='font-family:"Calibri",sans-serif;'>2. Know the Best
+                                                Timing&nbsp;</span></strong></h3>
+                                    <p
+                                        style='margin:0in;line-height:150%;font-size:15px;font-family:"Arial",sans-serif;margin-bottom:10.0pt;text-align:justify;'>
+                                        <span
+                                            style='font-size:16px;line-height:150%;font-family:"Calibri",sans-serif;'>Timing
+                                            is essential when you want to rent an apartment. If you are worried about
+                                            the budget, winter is usually the best time to rent. This is because most
+                                            people don&apos;t want to move when it&apos;s winter. In addition, many
+                                            people prefer to stay indoors rather than go house hunting. So, if you want
+                                            to get apartments at knock-off prices, schedule your move from December
+                                            through to January.&nbsp;</span></p>
+                                    <h3
+                                        style='margin-top:16.0pt;margin-right:0in;margin-bottom:10.0pt;margin-left:0in;line-height:150%;font-size:19px;font-family:"Arial",sans-serif;color:#434343;font-weight:normal;text-align:justify;'>
+                                        <strong><span style='font-family:"Calibri",sans-serif;'>3. Check Out the
+                                                Competition&nbsp;</span></strong></h3>
+                                    <p
+                                        style='margin:0in;line-height:150%;font-size:15px;font-family:"Arial",sans-serif;margin-bottom:10.0pt;text-align:justify;'>
+                                        <span
+                                            style='font-size:16px;line-height:150%;font-family:"Calibri",sans-serif;'>You
+                                            can walk around the neighbourhood and ask neighbours about vacancies and
+                                            prices. There is nothing wrong if you walk into lease offices and ask for
+                                            their prices. After the official launch of a building, there is usually a
+                                            lease-up offer. These lease-up offers mean that you can get cheaper rent
+                                            during the first six months after a new building complex is launched. Some
+                                            offers may include an application fee waiver or a month of free rent. The
+                                            better you know, the more you increase your chances of getting a lower
+                                            rent.&nbsp;</span></p>
+                                    <h3
+                                        style='margin-top:16.0pt;margin-right:0in;margin-bottom:10.0pt;margin-left:0in;line-height:150%;font-size:19px;font-family:"Arial",sans-serif;color:#434343;font-weight:normal;text-align:justify;'>
+                                        <strong><span style='font-family:"Calibri",sans-serif;'>4.
+                                                Co-renting</span></strong><span
+                                            style='font-family:"Calibri",sans-serif;'>&nbsp;</span></h3>
+                                    <p
+                                        style='margin:0in;line-height:150%;font-size:15px;font-family:"Arial",sans-serif;margin-bottom:10.0pt;text-align:justify;'>
+                                        <span
+                                            style='font-size:16px;line-height:150%;font-family:"Calibri",sans-serif;'>Co-renting
+                                            is an easy way to cut costs. It also helps you to enjoy some company while
+                                            you save money. Of course, before you co- rent, make sure you have a good
+                                            relationship with your roommate. It is also good to set ground rules about
+                                            who pays utilities and handles the rent. There should also be a stated rule
+                                            about overnight guests. The situation will be more manageable if you&apos;re
+                                            both determined to make the best of the arrangement.&nbsp;</span></p>
+                                    <h2
+                                        style='margin-top:.25in;margin-right:0in;margin-bottom:10.0pt;margin-left:0in;line-height:150%;font-size:21px;font-family:"Arial",sans-serif;font-weight:normal;text-align:justify;'>
+                                        <strong><span style='font-family:"Calibri",sans-serif;'>Final
+                                                Thoughts</span></strong><span
+                                            style='font-family:"Calibri",sans-serif;'>&nbsp;</span></h2>
+                                    <p
+                                        style='margin:0in;line-height:150%;font-size:15px;font-family:"Arial",sans-serif;margin-bottom:10.0pt;text-align:justify;'>
+                                        <span
+                                            style='font-size:16px;line-height:150%;font-family:"Calibri",sans-serif;'>While
+                                            it is not always an easy task to rent an apartment, the tips we&rsquo;ve
+                                            highlighted in this article will make the process easier. First, always ask
+                                            people around the particular neighbourhood you want to move in about what it
+                                            feels like to live in the area.&nbsp;</span></p>
+                                    <p
+                                        style='margin:0in;line-height:150%;font-size:15px;font-family:"Arial",sans-serif;margin-bottom:10.0pt;text-align:justify;'>
+                                        <span
+                                            style='font-size:16px;line-height:150%;font-family:"Calibri",sans-serif;'>In
+                                            most cases, the legwork and logistics involved in finding a suitable
+                                            apartment may be too cumbersome for you. However, with excellent property
+                                            review sites like <strong>Kijii</strong>, you can get all the details about
+                                            a prospective apartment from the comfort of your home.&nbsp;</span></p>
+                                    <p
+                                        style='margin:0in;line-height:150%;font-size:15px;font-family:"Arial",sans-serif;margin-bottom:10.0pt;text-align:justify;'>
+                                        <strong><em><span
+                                                    style='font-size:16px;line-height:150%;font-family:"Calibri",sans-serif;'>Download
+                                                    the Kijii app and register to read what previous property users have
+                                                    said concerning your proposed home today!</span></em></strong></p>
+                                    <p
+                                        style='margin:0in;line-height:115%;font-size:15px;font-family:"Arial",sans-serif;'>
+                                        &nbsp;</p>
                                 </article>
                                 <!-- /.post -->
                             </div>

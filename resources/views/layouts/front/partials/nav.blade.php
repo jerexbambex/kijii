@@ -48,11 +48,10 @@
             <div class="navbar-other w-100 d-flex ms-auto">
                 <ul class="navbar-nav flex-row align-items-center ms-auto">
                     <li class="nav-item">
-                        <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#modal-signin">Sign In</a>
+                        {{-- <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#modal-signin">Sign In</a> --}}
                     </li>
                     <li class="nav-item d-none d-md-block">
-                        <a href="#" class="btn btn-sm btn-primary rounded-pill" data-bs-toggle="modal"
-                            data-bs-target="#modal-signup">Sign Up</a>
+                        {{-- <a href="#" class="btn btn-sm btn-primary rounded-pill" data-bs-toggle="modal" data-bs-target="#modal-signup">Sign Up</a> --}}
                     </li>
                     <li class="nav-item d-lg-none">
                         <button class="hamburger offcanvas-nav-btn"><span></span></button>
