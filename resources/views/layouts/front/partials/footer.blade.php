@@ -34,9 +34,9 @@
             <div class="col-md-4 col-lg-4">
                 <div class="widget">
                     <h4 class="widget-title text-white mb-3">Get in Touch</h4>
-                    <address class="pe-xl-15 pe-xxl-17">Moonshine St. 14/05 Light City, London, United Kingdom
+                    <address class="pe-xl-15 pe-xxl-17">50 Mortimer Square, Milton Keynes MK9 2FB, United Kingdom
                     </address>
-                    <a href="mailto:#">info@email.com</a><br /> 00 (123) 456 78 90
+                    <a href="mailto:#">obinna@kijiiapp.com</a><br /> +44 7563 117246
                 </div>
                 <!-- /.widget -->
             </div>
