@@ -16,5 +16,4 @@
 {{-- <link rel="stylesheet" href="/front/assets/css/colors/yellow.css"> --}}
 <link rel="preload" href="/front/assets/css/fonts/thicccboi.css" as="style" onload="this.rel='stylesheet'">
 
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1621362716423418" crossorigin="anonymous"></script>
 
